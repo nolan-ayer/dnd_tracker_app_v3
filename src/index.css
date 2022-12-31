@@ -1,13 +1,204 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  font-family: Roboto;
+  color: white;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+h5 {
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0 0 0.5rem 0;
+}
+
+article {
+  padding-bottom: 1rem;
+}
+
+.contentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+a:visited {
+  color: white;
+}
+
+.embeddedLink {
+  color: teal;
+  text-decoration: none;
+}
+
+.embeddedLink:visited {
+  color: teal;
+}
+
+.embeddedLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.centered {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.submitButton {
+  cursor: pointer;
+}
+
+.submitButton__disabled {
+  cursor: default;
+}
+
+.deleteButton {
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  border: none;
+  transform: scale(1.05);
+  color: white;
+  background-color: salmon;
+}
+
+.deleteButton__disabled {
+  cursor: default;
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+  html {
+    font-size: medium;
+  }
+  button {
+    font-size: medium;
+  }
+  input {
+    font-size: medium;
+  }
+}
+
+@media (min-width: 1281px) and (orientation: landscape) {
+  html {
+    font-size: medium;
+  }
+  input {
+    font-size: medium;
+  }
+}
+
+@media (min-width: 1367px) and (orientation: landscape) {
+  html {
+    font-size: large;
+  }
+  button {
+    font-size: large;
+  }
+  input {
+    font-size: large;
+  }
+}
+
+@media (min-width: 1601px) and (orientation: landscape) {
+  html {
+    font-size: x-large;
+  }
+  button {
+    font-size: x-large;
+  }
+  input {
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 1921px) and (orientation: landscape) {
+  html {
+    font-size: xx-large;
+  }
+  button {
+    font-size: xx-large;
+  }
+  input {
+    font-size: xx-large;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  html {
+    font-size: medium;
+  }
+  h5 {
+    font-size: large;
+  }
+  h2 {
+    font-size: large;
+  }
+  button {
+    font-size: small;
+  }
+  input {
+    font-size: large;
+  }
+}
+
+@media (min-width: 801px) and (orientation: portrait) {
+  html {
+    font-size: large;
+  }
+  h5 {
+    font-size: x-large;
+  }
+  h2 {
+    font-size: x-large;
+  }
+  button {
+    font-size: medium;
+  }
+  input {
+    font-size: large;
+  }
 }

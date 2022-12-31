@@ -1,0 +1,59 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 45%);
+  }
+}
+
+@media (min-width: 901px) and (orientation: landscape) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media (min-width: 1281px) and (orientation: landscape) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media (min-width: 1367px) and (orientation: landscape) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media (min-width: 1601px) and (orientation: landscape) {
+  .cardContainer {
+    /* grid-template-columns: repeat(4, 25%); */
+    grid-template-columns: repeat(5, 19%);
+  }
+}
+
+@media (min-width: 1921px) and (orientation: landscape) {
+  .cardContainer {
+    grid-template-columns: repeat(5, 18%);
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .cardContainer {
+    grid-template-columns: repeat(1, 80%);
+  }
+}
+
+@media (min-width: 801px) and (orientation: portrait) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 45%);
+  }
+}

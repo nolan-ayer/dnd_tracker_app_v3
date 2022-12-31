@@ -1,0 +1,142 @@
+.cardsForm {
+  display: grid;
+  position: relative;
+  border: 1px white solid;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.cardsFormPlacementHelper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+
+.cardsFormInnerPlacementHelper {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalPlacementHelper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.cardsFormTitle {
+  border-bottom: 1px white solid;
+  padding-top: 0;
+}
+
+.cardsFormMain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 0 0;
+  width: 65%;
+}
+
+.cardFormInnerBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+}
+
+.cardsFormInnerColumnLeft {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: idk; */
+}
+
+.cardsFormInnerColumnRight {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: idk; */
+}
+
+.cardInputContainerName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid white;
+}
+
+.cardInputContainerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0 0;
+}
+
+.cardInputContainerRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 0 0 0;
+}
+
+.cardInputFieldName {
+  resize: none;
+  width: fit-content;
+  padding: 0.5rem;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.cardInputFieldName:focus {
+  outline: 1px solid lightskyblue;
+  box-shadow: 0 0 4px paleturquoise;
+}
+
+.cardInputField {
+  resize: none;
+  width: 60%;
+  padding: 0.5rem;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.cardInputField:focus {
+  outline: 1px solid lightskyblue;
+  box-shadow: 0 0 4px paleturquoise;
+}
+
+.cardInputFieldName:hover {
+  box-shadow: 0 0 5px 1px lightblue;
+}
+
+.cardInputFieldName::placeholder {
+  color: lightgray;
+}
+
+.cardInputField:hover {
+  box-shadow: 0 0 5px 1px lightblue;
+}
+
+.cardInputField::placeholder {
+  color: lightgray;
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}

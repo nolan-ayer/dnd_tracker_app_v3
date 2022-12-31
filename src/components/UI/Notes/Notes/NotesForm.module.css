@@ -1,0 +1,56 @@
+.notesForm {
+  padding: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.notesInputPlacementHelper {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 2rem);
+}
+
+.notesTitleInput {
+  resize: none;
+  width: 50%;
+  padding: 0.5rem;
+  margin: 0 0 1rem 0;
+  border-radius: 15px;
+}
+
+.notesTitleInput:focus {
+  outline: 1px solid lightskyblue;
+  box-shadow: 0 0 4px paleturquoise;
+}
+
+.notesTitleInput:hover {
+  box-shadow: 0 0 5px 1px lightblue;
+}
+
+.notesBodyInput {
+  resize: none;
+  height: 5rem;
+  width: calc(100% - 2px - 1rem);
+  padding: 0.5rem;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.notesBodyInput:focus {
+  outline: 1px solid lightskyblue;
+  box-shadow: 0 0 4px paleturquoise;
+}
+
+.notesBodyInput:hover {
+  box-shadow: 0 0 5px 1px lightblue;
+}
+
+.notesSubmitButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem 0 0;
+}

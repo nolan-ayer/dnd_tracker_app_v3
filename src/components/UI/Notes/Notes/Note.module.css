@@ -1,0 +1,31 @@
+.note {
+  position: relative;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.modalPlacementHelper {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.noteHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid white;
+}
+
+.noteMain {
+  padding: 1rem 0 1rem 1rem;
+  white-space: pre-line;
+}

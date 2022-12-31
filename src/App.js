@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route, Switch } from "react-router-dom";
+import { useContext } from "react";
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import Cards from "./components/UI/Cards/Cards";
+import Notes from "./components/UI/Notes/Notes";
+import ChangePasswordForm from "./components/UI/Profile/ChangePassword/ChangePasswordForm";
+import Welcome from "./components/UI/Welcome/Welcome";
+import SignupMain from "./components/UI/Signup/SignupMain";
+import LoginMain from "./components/UI/Login/LoginMain";
+import AuthContext from "./context/auth-context";
 
 function App() {
+  const authCtx = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Switch>
+        {authCtx.isLoggedIn && (
+          <Route path="/cards">
+            <Cards />
+          </Route>
+        )}
+        {authCtx.isLoggedIn && (
+          <Route path="/notes">
+            <Notes />
+          </Route>
+        )}
+        <Route path="/profile">
+          {authCtx.isLoggedIn && <ChangePasswordForm />}
+          {!authCtx.isLoggedIn && <Redirect to="/" />}
+        </Route>
+        {!authCtx.isLoggedIn && (
+          <Route path="/login">
+            <LoginMain />
+          </Route>
+        )}
+        {!authCtx.isLoggedIn && (
+          <Route path="/signup">
+            <SignupMain />
+          </Route>
+        )}
+        <Route path="/">
+          <Welcome />
+        </Route>
+        <Route path="*">
+          <Redirect to="/" />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 

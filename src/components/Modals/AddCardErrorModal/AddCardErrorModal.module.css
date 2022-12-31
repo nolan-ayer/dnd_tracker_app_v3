@@ -1,0 +1,52 @@
+.modalHelper {
+  display: flex;
+}
+
+.modalBackdrop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+}
+
+.modalBackdrop:hover {
+  /* cursor: pointer; */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modalMain {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: salmon;
+  border: 1px white solid;
+  border-radius: 15px;
+}
+
+.modalBackdropWithHover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+}
+.modalBackdropWithHover:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.removeElementNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
