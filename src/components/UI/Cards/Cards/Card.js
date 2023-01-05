@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./Cards.module.css";
 import Inventory from "./Inventory";
 import RemoveElementModal from "../../../Modals/RemoveElementModal/RemoveElementModal";

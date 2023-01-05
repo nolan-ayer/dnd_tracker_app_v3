@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 
 import AuthContext from "../../../context/auth-context";
 import styles from "../Signup/SignupForm.module.css";
@@ -13,6 +13,8 @@ const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(true);
   const [existingUser, setExistingUser] = useState(false);
+
+  const history = useHistory();
 
   const emailChangeHandler = (event) => {
     setEmailInput(event.target.value);
@@ -74,6 +76,7 @@ const LoginForm = () => {
 
         alert("Authentication successful!");
         resetHandler();
+        history.replace("/");
       }
     }
     existingAccountSubmissionHandler();

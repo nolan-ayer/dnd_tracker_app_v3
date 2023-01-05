@@ -1,12 +1,14 @@
 import { useEffect, useState, useContext } from "react";
 import CardsContainer from "./Cards/CardsContainer";
 import AuthContext from "../../../context/auth-context";
+import UpdatedListContext from "../../../context/update-list-context";
 import styles from "./Cards/Cards.module.css";
 
 const Cards = () => {
   const [playerCards, setPlayerCards] = useState([]);
-  // const router = useRouter();
+
   const authCtx = useContext(AuthContext);
+  const updatedListCtx = useContext(UpdatedListContext);
 
   //rewatch lecture 343
   async function fetchCardsHandler() {

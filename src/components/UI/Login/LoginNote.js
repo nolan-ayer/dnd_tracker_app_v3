@@ -1,5 +1,11 @@
 const LoginNote = () => {
-  return <article>Login with your registered email and password.</article>;
+  return (
+    <div className="contentMain">
+      <article className="mainContentsStandalone">
+        Login with your registered email and password.
+      </article>
+    </div>
+  );
 };
 
 export default LoginNote;

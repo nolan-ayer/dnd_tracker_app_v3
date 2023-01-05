@@ -69,7 +69,7 @@ const NotesForm = () => {
           onChange={noteBodyChangeHandler}
         />
       </div>
-      <div className={styles.notesSubmitButtonContainer}>
+      <div className="submitButtonContainer">
         <button
           type="submit"
           className={isDisabled ? "submitButton__disabled" : "submitButton"}

@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch, useHistory } from "react-router-dom";
 import { useContext } from "react";
 import "./App.css";
 import Layout from "./components/Layout/Layout";
@@ -13,9 +13,48 @@ import AuthContext from "./context/auth-context";
 function App() {
   const authCtx = useContext(AuthContext);
 
+  const history = useHistory();
+
   return (
     <Layout>
       <Switch>
+        {/* {authCtx.isLoggedIn ? (
+          <Route path="/cards">
+            <Cards />
+          </Route>
+        ) : (
+          history.replace("/")
+        )}
+        {authCtx.isLoggedIn ? (
+          <Route path="/notes">
+            <Notes />
+          </Route>
+        ) : (
+          history.replace("/")
+        )}
+        <Route path="/profile">
+          {authCtx.isLoggedIn ? <ChangePasswordForm /> : history.replace("/")}
+        </Route>
+        {!authCtx.isLoggedIn ? (
+          <Route path="/login">
+            <LoginMain />
+          </Route>
+        ) : (
+          history.replace("/")
+        )}
+        {!authCtx.isLoggedIn ? (
+          <Route path="/signup">
+            <SignupMain />
+          </Route>
+        ) : (
+          history.replace("/")
+        )}
+        <Route path="/">
+          <Welcome />
+        </Route>
+        <Route path="*">
+          <Redirect to="/" />
+        </Route> */}
         {authCtx.isLoggedIn && (
           <Route path="/cards">
             <Cards />
@@ -28,7 +67,6 @@ function App() {
         )}
         <Route path="/profile">
           {authCtx.isLoggedIn && <ChangePasswordForm />}
-          {!authCtx.isLoggedIn && <Redirect to="/" />}
         </Route>
         {!authCtx.isLoggedIn && (
           <Route path="/login">

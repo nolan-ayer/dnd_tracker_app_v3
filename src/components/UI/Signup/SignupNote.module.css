@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 8rem 2rem 8rem;
+  margin: 1rem 0;
 }
 
 .signupNoteContents {
-  width: 75%;
+  width: calc(40% + 6rem);
   text-align: center;
   padding: 0;
 }

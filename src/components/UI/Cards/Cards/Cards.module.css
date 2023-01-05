@@ -36,7 +36,7 @@
 .cardHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: fit-content;
   border-bottom: 1px white solid;
 }
 
@@ -45,8 +45,8 @@
 }
 
 .cardTitle {
-  height: fit-content;
-  padding: 0 0 1rem 0;
+  font-size: 3vh;
+  padding: 0;
 }
 
 .cardInnerOne__One {

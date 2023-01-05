@@ -6,18 +6,36 @@ import styles from "./ChangePasswordForm.module.css";
 const ChangePasswordForm = () => {
   const authCtx = useContext(AuthContext);
   const [enteredNewPassword, setEnteredNewPassword] = useState("");
+  const [enteredNewPasswordCheck, setEnteredNewPasswordCheck] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(true);
+  const [isValid, setIsValid] = useState(true);
 
-  const updatedPasswordChangeHandler = (event) => {
+  const enteredPasswordChangeHandler = (event) => {
     setEnteredNewPassword(event.target.value);
+  };
+
+  const checkEnteredPasswordHandler = (event) => {
+    setEnteredNewPasswordCheck(event.target.value);
   };
 
   const resetHandler = () => {
     setEnteredNewPassword("");
+    setEnteredNewPasswordCheck("");
   };
 
-  const submitHandler = (event) => {
+  const passwordCheckHandler = (event) => {
     event.preventDefault();
+    if (enteredNewPassword !== enteredNewPasswordCheck) {
+      setIsValid(false);
+    } else {
+      setIsValid(true);
+      setIsLoading(true);
+      submitHandler();
+    }
+  };
+
+  const submitHandler = () => {
     //validate entries
     async function postUpdatedPasswordHandler() {
       const response = await fetch(
@@ -43,13 +61,15 @@ const ChangePasswordForm = () => {
         if (data && data.error && data.error.message) {
           errorMessage = data.error.message;
           alert(errorMessage);
+          setIsLoading(false);
         } else {
           alert(errorMessage);
+          setIsLoading(false);
         }
       } else if (response.ok) {
         authCtx.login(data.idToken);
-
         alert("Password change successful!");
+        setIsLoading(false);
         resetHandler();
       }
     }
@@ -65,23 +85,60 @@ const ChangePasswordForm = () => {
   }, [enteredNewPassword]);
 
   return (
-    <main className={styles.changePasswordFormContainer}>
+    <main className="contentMain">
+      <section className="mainContentsStandalone">
+        Change your password here by entering it here! It must be at least 7
+        characters long. We won't enforce the composition of your password
+        because you're a grown up and are responsible for your own data, but it
+        is STRONGLY recommended that you have at least a couple non-sequential
+        numbers and one symbol.
+      </section>
       <form className={styles.changePasswordForm}>
-        <div>
+        <div className="align-left">
           <input
-            type="text"
-            className={styles.changePasswordFormInput}
+            type="password"
+            className={
+              isValid === true
+                ? styles.changePasswordFormInput
+                : styles.changePasswordFormInput__invalid
+            }
             placeholder="Enter new password"
             minLength="7"
             value={enteredNewPassword}
-            onChange={updatedPasswordChangeHandler}
+            onChange={enteredPasswordChangeHandler}
           ></input>
         </div>
-        <div>
+        <div className="align-left">
+          <input
+            type="password"
+            className={
+              isValid === true
+                ? styles.changePasswordFormInput
+                : styles.changePasswordFormInput__invalid
+            }
+            placeholder="Enter new password"
+            minLength="7"
+            value={enteredNewPasswordCheck}
+            onChange={checkEnteredPasswordHandler}
+          ></input>
+        </div>
+        <div
+          className={
+            !isLoading && isValid
+              ? "submitButtonContainer"
+              : "submitButtonContainer2"
+          }
+        >
+          {isLoading && (
+            <p className={styles.response__isLoading}>loading...</p>
+          )}
+          {!isValid && !isLoading && (
+            <p className={styles.response__invalid}>Passwords must match</p>
+          )}
           <button
             className={isDisabled ? "submitButton__disabled" : "submitButton"}
             type="submit"
-            onClick={submitHandler}
+            onClick={passwordCheckHandler}
             disabled={isDisabled}
             title={
               isDisabled ? "Password must be at least 7 characters long" : null

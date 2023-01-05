@@ -3,10 +3,10 @@ import LoginNote from "./LoginNote";
 
 const LoginMain = () => {
   return (
-    <>
+    <div>
       <LoginNote />
       <LoginForm />
-    </>
+    </div>
   );
 };
 

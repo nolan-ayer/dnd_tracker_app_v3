@@ -34,14 +34,14 @@ const CardsForm = () => {
     ) {
       setIsDisabled(true);
     } else if (
-      playerName &&
-      playerLvlRef &&
-      playerStrRef &&
-      playerFinRef &&
-      playerIntRef &&
-      playerConRef &&
-      playerMemRef &&
-      playerWitRef
+      !!playerName &&
+      !!playerLvlRef &&
+      !!playerStrRef &&
+      !!playerFinRef &&
+      !!playerIntRef &&
+      !!playerConRef &&
+      !!playerMemRef &&
+      !!playerWitRef
     ) {
       setIsDisabled(false);
     }
@@ -169,114 +169,112 @@ const CardsForm = () => {
             Reset
           </button>
         </div>
-        <div className={styles.cardsFormInnerPlacementHelper}>
-          <div className={styles.cardsFormMain}>
-            <div className={styles.cardFormInnerBox}>
-              <div className={styles.cardsFormInnerColumnLeft}>
-                <div className={styles.cardInputContainerLeft}>
-                  {/* <label className={styles.cardInputLabel}>LVL:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerLvlRef}
-                    title="Level"
-                    placeholder="LVL"
-                  ></input>
-                </div>
-                <div className={styles.cardInputContainerLeft}>
-                  {/* <label className={styles.cardInputLabel}>STR:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerStrRef}
-                    title="Strength"
-                    placeholder="STR"
-                  ></input>
-                </div>
-                <div className={styles.cardInputContainerLeft}>
-                  {/* <label className={styles.cardInputLabel}>FIN:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerFinRef}
-                    title="Finesse"
-                    placeholder="FIN"
-                  ></input>
-                </div>
-                <div className={styles.cardInputContainerLeft}>
-                  {/* <label className={styles.cardInputLabel}>INT:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerIntRef}
-                    title="Intelligence "
-                    placeholder="INT"
-                  ></input>
-                </div>
+        <div className={styles.cardsFormMain}>
+          <div className={styles.cardFormInnerBox}>
+            <div className={styles.cardsFormInnerColumnLeft}>
+              <div className={styles.cardInputContainerLeft}>
+                {/* <label className={styles.cardInputLabel}>LVL:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerLvlRef}
+                  title="Level"
+                  placeholder="LVL"
+                ></input>
               </div>
+              <div className={styles.cardInputContainerLeft}>
+                {/* <label className={styles.cardInputLabel}>STR:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerStrRef}
+                  title="Strength"
+                  placeholder="STR"
+                ></input>
+              </div>
+              <div className={styles.cardInputContainerLeft}>
+                {/* <label className={styles.cardInputLabel}>FIN:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerFinRef}
+                  title="Finesse"
+                  placeholder="FIN"
+                ></input>
+              </div>
+              <div className={styles.cardInputContainerLeft}>
+                {/* <label className={styles.cardInputLabel}>INT:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerIntRef}
+                  title="Intelligence "
+                  placeholder="INT"
+                ></input>
+              </div>
+            </div>
 
-              <div className={styles.cardsFormInnerColumnRight}>
-                <div className={styles.cardInputContainerRight}>
-                  {/* <label className={styles.cardInputLabel}>CON:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerConRef}
-                    title="Constitution"
-                    placeholder="CON"
-                  ></input>
-                </div>
-                <div className={styles.cardInputContainerRight}>
-                  {/* <label className={styles.cardInputLabel}>MEM:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerMemRef}
-                    title="Memory"
-                    placeholder="MEM"
-                  ></input>
-                </div>
-                <div className={styles.cardInputContainerRight}>
-                  {/* <label className={styles.cardInputLabel}>WIT:</label> */}
-                  <input
-                    className={styles.cardInputField}
-                    type="number"
-                    min="1"
-                    max="20"
-                    ref={playerWitRef}
-                    title="Wits"
-                    placeholder="WIT"
-                  ></input>
-                </div>
-                <div className={styles.submitButtonContainer}>
-                  <button
-                    className={
-                      isDisabled ? "submitButton__disabled" : "submitButton"
-                    }
-                    type="submit"
-                    onClick={submitHandler}
-                    disabled={isDisabled}
-                    title={
-                      isDisabled
-                        ? "Please fill out all entries before submitting"
-                        : null
-                    }
-                  >
-                    Submit
-                  </button>
-                </div>
+            <div className={styles.cardsFormInnerColumnRight}>
+              <div className={styles.cardInputContainerRight}>
+                {/* <label className={styles.cardInputLabel}>CON:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerConRef}
+                  title="Constitution"
+                  placeholder="CON"
+                ></input>
+              </div>
+              <div className={styles.cardInputContainerRight}>
+                {/* <label className={styles.cardInputLabel}>MEM:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerMemRef}
+                  title="Memory"
+                  placeholder="MEM"
+                ></input>
+              </div>
+              <div className={styles.cardInputContainerRight}>
+                {/* <label className={styles.cardInputLabel}>WIT:</label> */}
+                <input
+                  className={styles.cardInputField}
+                  type="number"
+                  min="1"
+                  max="20"
+                  ref={playerWitRef}
+                  title="Wits"
+                  placeholder="WIT"
+                ></input>
+              </div>
+              <div className={styles.submitButtonContainer}>
+                <button
+                  className={
+                    isDisabled ? "submitButton__disabled" : "submitButton"
+                  }
+                  type="submit"
+                  onClick={submitHandler}
+                  disabled={isDisabled}
+                  title={
+                    isDisabled
+                      ? "Please fill out all entries before submitting"
+                      : null
+                  }
+                >
+                  Submit
+                </button>
               </div>
             </div>
           </div>

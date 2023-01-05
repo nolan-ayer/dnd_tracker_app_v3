@@ -7,6 +7,16 @@ const LoginNav = () => {
   return (
     <nav className={styles.navContainer}>
       <Link
+        to="/signup"
+        className={
+          window.location.pathname === "/signup"
+            ? styles.navButton__selected
+            : styles.navButton
+        }
+      >
+        Signup
+      </Link>
+      <Link
         to="/login"
         className={
           window.location.pathname === "/login"

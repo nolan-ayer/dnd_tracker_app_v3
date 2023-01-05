@@ -1,0 +1,122 @@
+.contentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+
+.contentMainPlacementHelper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  width: calc(40% + 6rem);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.mainContents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mainContentsStandalone {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: calc(40% + 6rem);
+}
+
+.align-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.centered {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 1rem 0;
+}
+
+a:visited {
+  color: white;
+}
+
+.embeddedLink {
+  color: teal;
+  text-decoration: none;
+}
+
+.embeddedLink:visited {
+  color: teal;
+}
+
+.embeddedLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.inputField {
+  resize: none;
+  padding: 0.5rem;
+  margin: 0 0 1rem 0;
+  border-radius: 15px;
+}
+
+.inputField:focus {
+  outline: 1px solid lightskyblue;
+  box-shadow: 0 0 4px paleturquoise;
+}
+
+.inputField:hover {
+  box-shadow: 0 0 5px 1px lightblue;
+}
+
+.submitButton {
+  cursor: pointer;
+}
+
+.submitButton__disabled {
+  cursor: default;
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
+}
+
+.submitButtonContainer2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.deleteButton {
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  border: none;
+  transform: scale(1.05);
+  color: white;
+  background-color: salmon;
+}
+
+.deleteButton__disabled {
+  cursor: default;
+}

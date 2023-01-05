@@ -34,6 +34,11 @@ html {
   width: 100%;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 h5 {
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -51,63 +56,6 @@ li {
 
 article {
   padding-bottom: 1rem;
-}
-
-.contentMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10%;
-}
-
-a:visited {
-  color: white;
-}
-
-.embeddedLink {
-  color: teal;
-  text-decoration: none;
-}
-
-.embeddedLink:visited {
-  color: teal;
-}
-
-.embeddedLink:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.centered {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0.5rem 0 0.5rem 0;
-}
-
-.submitButton {
-  cursor: pointer;
-}
-
-.submitButton__disabled {
-  cursor: default;
-}
-
-.deleteButton {
-  cursor: pointer;
-}
-
-.deleteButton:hover {
-  border: none;
-  transform: scale(1.05);
-  color: white;
-  background-color: salmon;
-}
-
-.deleteButton__disabled {
-  cursor: default;
 }
 
 @media (min-width: 1280px) and (orientation: landscape) {
@@ -155,19 +103,7 @@ a:visited {
   }
 }
 
-@media (min-width: 1921px) and (orientation: landscape) {
-  html {
-    font-size: xx-large;
-  }
-  button {
-    font-size: xx-large;
-  }
-  input {
-    font-size: xx-large;
-  }
-}
-
-@media (max-width: 800px) and (orientation: portrait) {
+/* @media (max-width: 800px) and (orientation: portrait) {
   html {
     font-size: medium;
   }
@@ -201,4 +137,4 @@ a:visited {
   input {
     font-size: large;
   }
-}
+} */
