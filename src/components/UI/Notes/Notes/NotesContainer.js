@@ -16,17 +16,18 @@ const NotesContainer = (props) => {
   });
 
   return (
-    <section className={styles.notesContainer}>
-      <NotesInput />
+    <ul className={styles.notesContainer}>
+      <NotesInput updateNoteList={props.updateNoteList} />
       {noteContentsArray.map((contents) => (
         <Note
           key={contents.id}
           id={contents.id}
           title={contents.title}
           body={contents.body}
+          updateNoteList={props.updateNoteList}
         />
       ))}
-    </section>
+    </ul>
   );
 };
 

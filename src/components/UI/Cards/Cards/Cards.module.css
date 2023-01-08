@@ -8,6 +8,8 @@
   overflow-y: scroll;
   overflow-x: hidden;
   background: rgba(0, 0, 0, 0.25);
+  /* height: 25vh; */
+  font-size: 1.8vw;
 }
 
 .card::-webkit-scrollbar {
@@ -36,6 +38,7 @@
 .cardHeader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: fit-content;
   border-bottom: 1px white solid;
 }
@@ -45,8 +48,8 @@
 }
 
 .cardTitle {
-  font-size: 3vh;
-  padding: 0;
+  padding: 0 0 1rem 0;
+  font-size: 2vw;
 }
 
 .cardInnerOne__One {
@@ -110,13 +113,17 @@
 
 @media (min-width: 1921px) and (orientation: landscape) {
   .card {
-    max-height: 700px;
+    /* max-height: 700px; */
   }
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
   .card {
     max-height: 500px;
+    font-size: 2vh;
+  }
+  .cardTitle {
+    font-size: 2.5vh;
   }
 }
 .cardsForm {
@@ -126,5 +133,9 @@
 @media (min-width: 801px) and (orientation: portrait) {
   .cardsForm {
     margin-bottom: 1rem;
+    font-size: 2vh;
+  }
+  .cardTitle {
+    font-size: 2.5vh;
   }
 }

@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./NotesForm.module.css";
 
-const NotesForm = () => {
+const NotesForm = (props) => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [noteTitle, setNoteTitle] = useState("");
   const [noteBody, setNoteBody] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const noteTitleChangeHandler = (event) => {
     setNoteTitle(event.target.value);
@@ -21,6 +22,7 @@ const NotesForm = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    setIsLoading(true);
     const notesData = { noteTitle, noteBody };
     async function postNoteHandler(notesData) {
       const response = await fetch(
@@ -37,7 +39,8 @@ const NotesForm = () => {
       );
       const data = await response.json();
       if (response.ok) {
-        window.location.reload(true);
+        props.updateNoteList();
+        setIsLoading(false);
       }
       console.log(data);
     }
@@ -46,7 +49,7 @@ const NotesForm = () => {
   };
 
   useEffect(() => {
-    if (!noteTitle || !noteBody) {
+    if (noteTitle.trim() == "" || noteBody.trim() == "") {
       setIsDisabled(true);
     } else {
       setIsDisabled(false);
@@ -69,14 +72,17 @@ const NotesForm = () => {
           onChange={noteBodyChangeHandler}
         />
       </div>
-      <div className="submitButtonContainer">
+      <div
+        className={
+          !isLoading ? "submitButtonContainer" : "submitButtonContainer2"
+        }
+      >
+        {isLoading && <p className="response__isLoading">updating list...</p>}
         <button
           type="submit"
           className={isDisabled ? "submitButton__disabled" : "submitButton"}
           disabled={isDisabled}
-          title={
-            isDisabled ? "Please fill out all fields before submitting" : null
-          }
+          title={isDisabled ? "Fields must not be empty" : null}
           onClick={submitHandler}
         >
           Submit

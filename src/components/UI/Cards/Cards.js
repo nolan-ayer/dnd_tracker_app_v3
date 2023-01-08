@@ -51,7 +51,7 @@ const Cards = () => {
     <>
       {/* <pre>{JSON.stringify(playerCards, null, 2)}</pre> */}
       <CardsContainer
-        addCardHandler={fetchCardsHandler}
+        updateCardList={fetchCardsHandler}
         className={styles.cardContainer}
         cards={playerCards}
       />

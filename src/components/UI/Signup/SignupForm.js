@@ -91,14 +91,14 @@ const SignupForm = () => {
           placeholder="Enter your email"
           value={emailInput}
           onChange={emailChangeHandler}
-        ></input>
+        />
         <input
           className={styles.signupTextField}
           type="password"
           placeholder="Enter a password"
           value={passwordInput}
           onChange={passwordChangeHandler}
-        ></input>
+        />
 
         <nav className={styles.signupCardContainer}>
           <Link

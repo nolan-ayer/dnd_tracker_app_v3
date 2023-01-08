@@ -3,7 +3,7 @@ import styles from "./CardsForm.module.css";
 import AddCardErrorModal from "../../../Modals/AddCardErrorModal/AddCardErrorModal";
 import AuthContext from "../../../../context/auth-context";
 
-const CardsForm = () => {
+const CardsForm = (props) => {
   const [playerName, setPlayerName] = useState("");
   const playerLvlRef = useRef(null);
   const playerStrRef = useRef(null);
@@ -56,8 +56,7 @@ const CardsForm = () => {
     playerWitRef,
   ]);
 
-  const resetHandler = (event) => {
-    event.preventDefault();
+  const resetHandler = () => {
     setPlayerName("");
     playerLvlRef.current.value = null;
     playerStrRef.current.value = null;
@@ -130,7 +129,7 @@ const CardsForm = () => {
         );
         const data = await response.json();
         if (response.ok) {
-          window.location.reload(true);
+          props.updateCardList();
         }
         console.log(data);
       }
@@ -158,7 +157,7 @@ const CardsForm = () => {
             onChange={nameChangeHandler}
             title="Name"
             placeholder="Name"
-          ></input>
+          />
           <button
             onClick={resetHandler}
             className={isDisabled ? "submitButton__disabled" : "submitButton"}
@@ -182,7 +181,7 @@ const CardsForm = () => {
                   ref={playerLvlRef}
                   title="Level"
                   placeholder="LVL"
-                ></input>
+                />
               </div>
               <div className={styles.cardInputContainerLeft}>
                 {/* <label className={styles.cardInputLabel}>STR:</label> */}
@@ -194,7 +193,7 @@ const CardsForm = () => {
                   ref={playerStrRef}
                   title="Strength"
                   placeholder="STR"
-                ></input>
+                />
               </div>
               <div className={styles.cardInputContainerLeft}>
                 {/* <label className={styles.cardInputLabel}>FIN:</label> */}
@@ -206,7 +205,7 @@ const CardsForm = () => {
                   ref={playerFinRef}
                   title="Finesse"
                   placeholder="FIN"
-                ></input>
+                />
               </div>
               <div className={styles.cardInputContainerLeft}>
                 {/* <label className={styles.cardInputLabel}>INT:</label> */}
@@ -218,7 +217,7 @@ const CardsForm = () => {
                   ref={playerIntRef}
                   title="Intelligence "
                   placeholder="INT"
-                ></input>
+                />
               </div>
             </div>
 
@@ -233,7 +232,7 @@ const CardsForm = () => {
                   ref={playerConRef}
                   title="Constitution"
                   placeholder="CON"
-                ></input>
+                />
               </div>
               <div className={styles.cardInputContainerRight}>
                 {/* <label className={styles.cardInputLabel}>MEM:</label> */}
@@ -245,7 +244,7 @@ const CardsForm = () => {
                   ref={playerMemRef}
                   title="Memory"
                   placeholder="MEM"
-                ></input>
+                />
               </div>
               <div className={styles.cardInputContainerRight}>
                 {/* <label className={styles.cardInputLabel}>WIT:</label> */}
@@ -257,7 +256,7 @@ const CardsForm = () => {
                   ref={playerWitRef}
                   title="Wits"
                   placeholder="WIT"
-                ></input>
+                />
               </div>
               <div className={styles.submitButtonContainer}>
                 <button

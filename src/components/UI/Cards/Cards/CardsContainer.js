@@ -1,10 +1,6 @@
-import { useContext } from "react";
-
 import Card from "./Card";
 import CardsForm from "./CardsForm";
 import styles from "./CardsContainer.module.css";
-import AuthContext from "../../../../context/auth-context";
-import { useLocation } from "react-router-dom";
 
 const CardsContainer = (props) => {
   const cards = props.cards;
@@ -25,14 +21,12 @@ const CardsContainer = (props) => {
     });
   });
 
-  const location = useLocation();
-  const authCtx = useContext;
-
   return (
-    <div className={styles.cardContainer}>
-      <CardsForm />
+    <ul className={styles.cardContainer}>
+      <CardsForm updateCardList={props.updateCardList} />
       {cardContentsArray.map((contents) => (
         <Card
+          updateCardList={props.updateCardList}
           key={contents.id}
           id={contents.id}
           name={contents.name}
@@ -45,7 +39,7 @@ const CardsContainer = (props) => {
           wit={contents.wit}
         />
       ))}
-    </div>
+    </ul>
   );
 };
 

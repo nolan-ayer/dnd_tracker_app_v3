@@ -36,7 +36,7 @@ const Notes = () => {
 
   return (
     <>
-      <NotesContainer notes={playerNotes} />
+      <NotesContainer notes={playerNotes} updateNoteList={fetchNotesHandler} />
     </>
   );
 };

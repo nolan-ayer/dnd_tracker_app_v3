@@ -16,11 +16,11 @@ const Note = (props) => {
       },
       console.log(`deleted ${props.id}`)
     );
-    window.location.reload(true);
+    props.updateNoteList();
   }
 
   return (
-    <main className={styles.note} key={props.id}>
+    <li className={styles.note} key={props.id}>
       {showRemoveModal ? (
         <div className={styles.modalPlacementHelper}>
           <RemoveElementModal
@@ -48,7 +48,7 @@ const Note = (props) => {
         </nav>
       </h5>
       <article className={styles.noteMain}>{props.body}</article>
-    </main>
+    </li>
   );
 };
 

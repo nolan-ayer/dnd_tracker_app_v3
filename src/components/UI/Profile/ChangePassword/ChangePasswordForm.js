@@ -106,7 +106,7 @@ const ChangePasswordForm = () => {
             minLength="7"
             value={enteredNewPassword}
             onChange={enteredPasswordChangeHandler}
-          ></input>
+          />
         </div>
         <div className="align-left">
           <input
@@ -120,7 +120,7 @@ const ChangePasswordForm = () => {
             minLength="7"
             value={enteredNewPasswordCheck}
             onChange={checkEnteredPasswordHandler}
-          ></input>
+          />
         </div>
         <div
           className={
@@ -129,11 +129,9 @@ const ChangePasswordForm = () => {
               : "submitButtonContainer2"
           }
         >
-          {isLoading && (
-            <p className={styles.response__isLoading}>loading...</p>
-          )}
+          {isLoading && <p className="response__isLoading">loading...</p>}
           {!isValid && !isLoading && (
-            <p className={styles.response__invalid}>Passwords must match</p>
+            <p className="response__invalid">Passwords must match</p>
           )}
           <button
             className={isDisabled ? "submitButton__disabled" : "submitButton"}
