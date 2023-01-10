@@ -37,10 +37,10 @@
 .navButton {
   display: flex;
   text-decoration: none;
-  padding: 0.2rem;
-  margin: 0.2rem;
-  height: 2.5rem;
-  width: 4.2rem;
+  padding: 0.5vh;
+  margin: 0.5vw;
+  height: 3vw;
+  width: 5vw;
   border: none;
   border-radius: 15px;
   background: transparent;
@@ -58,10 +58,10 @@
 .navButton__selected {
   display: flex;
   text-decoration: none;
-  padding: 0.2rem;
-  margin: 0.2rem;
-  height: 2.5rem;
-  width: 4.2rem;
+  padding: 0.5vh;
+  margin: 0.5vw;
+  height: 3vw;
+  width: 5vw;
   border: none;
   border-radius: 15px;
   background: teal;
@@ -74,35 +74,35 @@
   cursor: default;
 }
 
-@media (min-width: 1280px) and (orientation: landscape) {
+/* @media (min-width: 1280px) and (orientation: landscape) {
   .navButton {
     font-size: medium;
   }
-}
+} */
 
-@media (min-width: 1281px) and (orientation: landscape) {
+/* @media (min-width: 1281px) and (orientation: landscape) {
   .navButton {
     font-size: medium;
   }
-}
+} */
 
-@media (min-width: 1367px) and (orientation: landscape) {
+/* @media (min-width: 1367px) and (orientation: landscape) {
   .navButton {
     font-size: large;
   }
-}
+} */
 
-@media (min-width: 1601px) and (orientation: landscape) {
+/* @media (min-width: 1601px) and (orientation: landscape) {
   .navButton {
     font-size: x-large;
   }
-}
+} */
 
-@media (min-width: 1921px) and (orientation: landscape) {
+/* @media (min-width: 1921px) and (orientation: landscape) {
   .navButton {
     font-size: xx-large;
   }
-}
+} */
 
 @media (max-width: 800px) and (orientation: portrait) {
   .headerMain {

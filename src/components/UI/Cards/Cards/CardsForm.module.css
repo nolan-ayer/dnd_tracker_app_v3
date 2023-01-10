@@ -37,22 +37,16 @@
   margin: 0.5rem 0 0 0;
 }
 
-.cardFormInnerBox {
+.attributeRow {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.attributeRow2 {
+  display: flex;
   justify-content: space-between;
-  margin: 0;
-}
-
-.cardsFormInnerColumnLeft {
-  display: flex;
-  flex-direction: column;
-}
-
-.cardsFormInnerColumnRight {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 .cardInputContainerName {
@@ -60,31 +54,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 1rem 0;
+  padding: 0 0 0.5rem 0;
   border-bottom: 1px solid white;
-}
-
-.cardInputContainerLeft {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.5rem 0 0 0;
-}
-
-.cardInputContainerRight {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0.5rem 0 0 0;
 }
 
 .cardInputFieldName {
   resize: none;
   width: fit-content;
+  width: 100%;
   padding: 0.5rem;
-  margin: 0;
+  margin: 0 0.5rem 0 0;
   border-radius: 15px;
 }
 
@@ -99,6 +78,7 @@
   padding: 0.5rem;
   margin: 0;
   border-radius: 15px;
+  text-align: center;
 }
 
 .cardInputField:focus {

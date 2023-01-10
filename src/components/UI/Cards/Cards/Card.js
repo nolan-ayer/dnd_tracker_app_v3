@@ -82,22 +82,20 @@ const Card = (props) => {
           </button>
         </nav>
       </span>
-      <ul>
-        <div className={styles.cardInnerOne__One}>
+      <ul className={styles.cardInner}>
+        <section className={styles.attributeRow}>
           <li>LVL: {props.lvl}</li>
-          <section className={styles.cardInnerOne__Two}>
-            <ul className={styles.cardInnerOne__Three}>
-              <li>STR: {props.str}</li>
-              <li>FIN: {props.fin}</li>
-              <li>INT: {props.int}</li>
-            </ul>
-            <ul className={styles.cardInnerOne__Three}>
-              <li>CON: {props.con}</li>
-              <li>MEM: {props.mem}</li>
-              <li>WIT: {props.wit}</li>
-            </ul>
-          </section>
-        </div>
+        </section>
+        <section className={styles.attributeRow2}>
+          <li>STR: {props.str}</li>
+          <li>FIN: {props.fin}</li>
+          <li>INT: {props.int}</li>
+        </section>
+        <section className={styles.attributeRow2}>
+          <li>CON: {props.con}</li>
+          <li>MEM: {props.mem}</li>
+          <li>WIT: {props.wit}</li>
+        </section>
       </ul>
       {/* <ul className={styles.cardInnerTwo__One}>
 

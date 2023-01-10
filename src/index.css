@@ -14,6 +14,7 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  font-size: 1.5vw;
 }
 
 code {
@@ -60,81 +61,81 @@ article {
 
 @media (min-width: 1280px) and (orientation: landscape) {
   html {
-    font-size: medium;
+    /* font-size: medium; */
   }
   button {
-    font-size: medium;
+    /* font-size: medium; */
   }
   input {
-    font-size: medium;
+    /* font-size: medium; */
   }
 }
 
 @media (min-width: 1281px) and (orientation: landscape) {
   html {
-    font-size: medium;
+    /* font-size: medium; */
   }
   input {
-    font-size: medium;
+    /* font-size: medium; */
   }
 }
 
 @media (min-width: 1367px) and (orientation: landscape) {
   html {
-    font-size: large;
+    /* font-size: large; */
   }
   button {
-    font-size: large;
+    /* font-size: large; */
   }
   input {
-    font-size: large;
+    /* font-size: large; */
   }
 }
 
 @media (min-width: 1601px) and (orientation: landscape) {
   html {
-    font-size: x-large;
+    /* font-size: x-large; */
   }
   button {
-    font-size: x-large;
+    /* font-size: x-large; */
   }
   input {
-    font-size: x-large;
+    /* font-size: x-large; */
   }
 }
 
-/* @media (max-width: 800px) and (orientation: portrait) {
+@media (max-width: 800px) and (orientation: portrait) {
   html {
-    font-size: medium;
+    /* font-size: medium; */
   }
   h5 {
-    font-size: large;
+    /* font-size: large; */
   }
   h2 {
-    font-size: large;
+    /* font-size: large; */
   }
   button {
-    font-size: small;
+    /* font-size: small; */
   }
   input {
-    font-size: large;
+    /* font-size: large; */
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
   html {
-    font-size: large;
+    /* font-size: large; */
   }
   h5 {
-    font-size: x-large;
+    /* font-size: x-large; */
   }
   h2 {
-    font-size: x-large;
+    /* font-size: x-large; */
   }
   button {
-    font-size: medium;
+    /* font-size: medium; */
   }
   input {
-    font-size: large;
+    /* font-size: large; */
   }
-} */
+}
