@@ -26,7 +26,15 @@ const Welcome = () => {
             {""} to get started!
           </section>
         ) : (
-          <section className="contentMain">Thank you for signing in!</section>
+          <>
+            <section className="contentMain">Known issues:</section>
+            <section className="contentMain">
+              onCardEdit, values can exceed the maxValue set in the initial form
+            </section>
+            <section className="contentMain">
+              Custom hooks should be used for HTTP requests
+            </section>
+          </>
         )}
       </section>
     </div>
