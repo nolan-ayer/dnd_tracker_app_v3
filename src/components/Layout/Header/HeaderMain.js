@@ -1,10 +1,12 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import Welcome from "../../UI/Welcome/Welcome";
 
 import styles from "./Header.module.css";
 import HeaderNav from "./HeaderNav";
 
 const HeaderMain = () => {
+  const location = useLocation();
+
   return (
     <>
       <header className={styles.headerMain}>
@@ -16,7 +18,7 @@ const HeaderMain = () => {
               : styles.titleButton
           }
         >
-          <section className={styles.headerTitle}>>tracker app</section>
+          <section className={styles.headerTitle}>{`[some_logo_here]`}</section>
         </Link>
         <HeaderNav />
       </header>

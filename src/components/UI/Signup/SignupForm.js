@@ -83,49 +83,53 @@ const SignupForm = () => {
   };
 
   return (
-    <section className={styles.signupContainer}>
-      <form className={styles.signupForm}>
-        <input
-          type="text"
-          className={styles.signupTextField}
-          placeholder="Enter your email"
-          value={emailInput}
-          onChange={emailChangeHandler}
-        />
-        <input
-          className={styles.signupTextField}
-          type="password"
-          placeholder="Enter a password"
-          value={passwordInput}
-          onChange={passwordChangeHandler}
-        />
+    <section className="contentMain">
+      <form className="contentMainPlacementHelper">
+        <div className="mainContentsStandalone">
+          <input
+            type="text"
+            className={styles.signupTextField}
+            placeholder="Enter your email"
+            value={emailInput}
+            onChange={emailChangeHandler}
+          />
+          <input
+            className={styles.signupTextField}
+            type="password"
+            placeholder="Enter a password"
+            value={passwordInput}
+            onChange={passwordChangeHandler}
+          />
 
-        <nav className={styles.signupCardContainer}>
-          <Link
-            to="/login"
-            className="embeddedLink"
-            onClick={toggleLoginTypeHandler}
-          >
-            Already have an account?
-          </Link>
-
-          {!isLoading && (
-            <button
-              className={isDisabled ? "submitButton__disabled" : "submitButton"}
-              type="submit"
-              onClick={submitHandler}
-              disabled={isDisabled}
-              title={
-                isDisabled
-                  ? "Please fill out all entries before submitting"
-                  : null
-              }
+          <nav className={styles.signupCardContainer}>
+            <Link
+              to="/login"
+              className="embeddedLink"
+              onClick={toggleLoginTypeHandler}
             >
-              Create Account
-            </button>
-          )}
-          {isLoading && <p>Processing request...</p>}
-        </nav>
+              Already have an account?
+            </Link>
+
+            {!isLoading && (
+              <button
+                className={
+                  isDisabled ? "submitButton__disabled" : "submitButton"
+                }
+                type="submit"
+                onClick={submitHandler}
+                disabled={isDisabled}
+                title={
+                  isDisabled
+                    ? "Please fill out all entries before submitting"
+                    : null
+                }
+              >
+                Create Account
+              </button>
+            )}
+            {isLoading && <p>Processing request...</p>}
+          </nav>
+        </div>
       </form>
     </section>
   );

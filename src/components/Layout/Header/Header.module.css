@@ -24,8 +24,21 @@
 }
 
 .titleButton {
+  text-decoration: none;
+  margin: 0 0.2rem;
+}
+
+.titleButton:hover {
+  cursor: pointer;
+  /* transition: 350ms; */
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  border-radius: 15px;
+}
+
+.titleButton__selected {
   display: flex;
   text-decoration: none;
+  margin: 0 0.2rem;
   border: none;
   border-radius: 15px;
   background: transparent;
@@ -34,9 +47,8 @@
   justify-content: center;
 }
 
-.titleButton__selected {
+.titleButton__selected:hover {
   cursor: default;
-  text-decoration: none;
 }
 
 .navButton {
@@ -57,7 +69,6 @@
 .navButton:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: 350ms;
 }
 
 .navButton__selected {
@@ -77,6 +88,16 @@
 
 .navButton__selected:hover {
   cursor: default;
+}
+
+.navButton:hover,
+.navButton__selected:hover {
+  transition: all 150ms ease-in;
+
+  text-shadow: 0 0 4px white;
+  text-shadow: 0 0 6px white;
+  text-shadow: 0 0 10px palegoldenrod;
+  text-shadow: 0 0 12px palegoldenrod;
 }
 
 /* @media (min-width: 1280px) and (orientation: landscape) {
@@ -112,6 +133,7 @@
 @media (max-width: 799px) and (orientation: portrait) {
   .headerMain {
     padding: 0;
+    border: 1px white solid;
   }
   .navContainer {
     height: 8vh;
@@ -140,6 +162,7 @@
 @media (min-width: 800px) and (orientation: portrait) {
   .headerMain {
     padding: 0;
+    border: 1px white solid;
   }
   .navContainer {
     height: 8vh;

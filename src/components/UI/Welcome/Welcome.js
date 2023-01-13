@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../../context/auth-context";
 import styles from "./Welcome.module.css";
@@ -27,13 +27,19 @@ const Welcome = () => {
           </section>
         ) : (
           <>
-            <section className="contentMain">Known issues:</section>
+            <section className="contentMain">Fixes Coming Soon:</section>
             <section className="contentMain">
               onCardEdit, values can exceed the maxValue set in the initial form
             </section>
             <section className="contentMain">
               Custom hooks should be used for HTTP requests
             </section>
+            <section className="contentMain">
+              {`   Scaling issue at width ~450px; potential Chrome DevTools
+              responsive dimensions bug; does not happen when window is resized
+              & responsive is disabled; chrome revision: e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}`}
+            </section>
+            <section className="contentMain">Add inventory to cards</section>
           </>
         )}
       </section>
