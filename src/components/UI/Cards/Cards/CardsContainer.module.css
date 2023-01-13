@@ -16,7 +16,7 @@
   }
 }
 
-@media (min-width: 900) and (orientation: landscape) {
+@media (min-width: 900px) and (orientation: landscape) {
   .cardContainer {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 649px) and (orientation: portrait) {
+@media (max-width: 800px) and (orientation: portrait) {
   .cardContainer {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -48,7 +48,7 @@
   }
 }
 
-@media (min-width: 650px) and (orientation: portrait) {
+@media (min-width: 801px) and (orientation: portrait) {
   .cardContainer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);

@@ -77,8 +77,6 @@ a:visited {
   border: none;
   text-align: center;
   height: 6vh;
-  max-width: 8vw;
-  min-width: 4vw;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -144,38 +142,42 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0 0 0 1rem;
 }
 
-/* @media (max-width: 1279px) and (orientation: landscape) {
+@media (max-width: 1279px) and (orientation: landscape) {
   .inputField {
+    width: 7vw;
   }
-} */
+}
 
-/* @media (min-width: 1280px) and (orientation: landscape) {
+@media (min-width: 1280px) and (orientation: landscape) {
   .inputField {
+    min-width: 6vw;
   }
-} */
+}
 
-/* @media (min-width: 1366px) and (orientation: landscape) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .inputField {
+    min-width: 5vw;
   }
-} */
+}
 
-/* @media (min-width: 1600px) and (orientation: landscape) {
+@media (min-width: 1600px) and (orientation: landscape) {
   .inputField {
+    min-width: 4vw;
   }
-} */
+}
 
 @media (max-width: 800px) and (orientation: portrait) {
   .inputField {
-    height: 5vh;
-    max-width: fit-content;
+    height: 8vh;
+    width: 22vw;
     font-size: 2vh;
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
   .inputField {
-    height: 5vh;
-    max-width: fit-content;
+    height: 8vh;
+    width: 12vw;
     font-size: 2vh;
   }
 }

@@ -76,19 +76,41 @@
   width: 100%;
 }
 
-.attributeRow > li,
+/* .attributeRow > li,
 .attributeRow2 > li {
   margin: 0 0.2rem;
   font-size: 1vw;
-}
+} */
 
 .cardButtonContainer__One {
   padding: 0;
 }
 
-@media (max-width: 1279px) and (orientation: landscape) {
+@media (max-width: 799px) and (orientation: landscape) {
   .card {
     min-height: 32vh;
+  }
+  .cardTitle {
+    font-size: 2.5vw;
+  }
+  .attributeRow > li,
+  .attributeRow2 > li {
+    margin: 0 0.2rem;
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+  .card {
+    min-height: 32vh;
+  }
+  .cardTitle {
+    font-size: 1.75vw;
+  }
+  .attributeRow > li,
+  .attributeRow2 > li {
+    margin: 0 0.2rem;
+    font-size: 1.5vw;
   }
 }
 
@@ -96,31 +118,55 @@
   .card {
     min-height: 32vh;
   }
+  .cardTitle {
+    font-size: 1.5vw;
+  }
+  .attributeRow > li,
+  .attributeRow2 > li {
+    margin: 0 0.2rem;
+    font-size: 1.25vw;
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .card {
     min-height: 32vh;
   }
+  .cardTitle {
+    font-size: 1.25vw;
+  }
+  .attributeRow > li,
+  .attributeRow2 > li {
+    margin: 0 0.2rem;
+    font-size: 1vw;
+  }
 }
 
 @media (min-width: 1600px) and (orientation: landscape) {
-  .cardTitle {
-    font-size: 1vw;
-  }
   .card {
-    font-size: 0.75vw;
     min-height: 24vh;
+  }
+  .cardTitle {
+    font-size: 1.25vw;
+  }
+  .attributeRow > li,
+  .attributeRow2 > li {
+    margin: 0 0.2rem;
+    font-size: 1vw;
   }
 }
 
 @media (min-width: 1920px) and (orientation: landscape) {
-  .cardTitle {
-    font-size: 1vw;
-  }
   .card {
-    font-size: 0.75vw;
     min-height: 24vh;
+  }
+  .cardTitle {
+    font-size: 1.25vw;
+  }
+  .attributeRow > li,
+  .attributeRow2 > li {
+    margin: 0 0.2rem;
+    font-size: 1vw;
   }
 }
 
