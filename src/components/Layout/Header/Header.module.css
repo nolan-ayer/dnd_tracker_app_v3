@@ -93,7 +93,6 @@
 .navButton:hover,
 .navButton__selected:hover {
   transition: all 150ms ease-in;
-
   text-shadow: 0 0 4px white;
   text-shadow: 0 0 6px white;
   text-shadow: 0 0 10px palegoldenrod;
@@ -133,27 +132,27 @@
 @media (max-width: 799px) and (orientation: portrait) {
   .headerMain {
     padding: 0;
-    border: 1px white solid;
+    border: none;
   }
   .navContainer {
     height: 8vh;
     padding: 0;
   }
   .navButton {
-    font-size: 2.5vw;
+    /* font-size: 2.5vw; */
     width: fit-content;
     height: 100%;
     border-radius: 0;
-    border: 1px solid white;
+    border: none;
     padding: 0 1rem 0 1rem;
     margin: 0;
   }
   .navButton__selected {
-    font-size: 2.5vw;
+    /* font-size: 2.5vw; */
     width: fit-content;
     height: 100%;
     border-radius: 0;
-    padding: 0 1rem 0 1rem;
+    padding: none;
     margin: 0;
     border: 1px solid palegoldenrod;
   }
@@ -162,28 +161,28 @@
 @media (min-width: 800px) and (orientation: portrait) {
   .headerMain {
     padding: 0;
-    border: 1px white solid;
+    border: none;
   }
   .navContainer {
     height: 8vh;
     padding: 0;
   }
   .navButton {
-    font-size: 2.5vw;
+    /* font-size: 2.5vw; */
     width: fit-content;
     height: 100%;
     border-radius: 0;
-    border: 1px solid white;
+    border: none;
     padding: 0 1rem 0 1rem;
     margin: 0;
   }
   .navButton__selected {
-    font-size: 2.5vw;
+    /* font-size: 2.5vw; */
     width: fit-content;
     height: 100%;
     border-radius: 0;
     padding: 0 1rem 0 1rem;
     margin: 0;
-    border: 1px solid palegoldenrod;
+    border: none;
   }
 }
