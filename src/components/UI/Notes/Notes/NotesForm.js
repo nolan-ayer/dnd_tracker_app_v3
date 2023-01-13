@@ -58,36 +58,39 @@ const NotesForm = (props) => {
 
   return (
     <form className={styles.notesForm}>
-      <div className={styles.notesInputPlacementHelper}>
+      <section className={styles.notesTitleContainer}>
         <textarea
-          placeholder="Enter your note title here"
+          type="text"
+          placeholder="Title"
           className={styles.notesTitleInput}
           value={noteTitle}
           onChange={noteTitleChangeHandler}
         />
+      </section>
+      <section className={styles.noteBody}>
         <textarea
-          placeholder="Enter your note here"
+          placeholder="Note body"
           className={styles.notesBodyInput}
           value={noteBody}
           onChange={noteBodyChangeHandler}
         />
-      </div>
-      <div
-        className={
-          !isLoading ? "submitButtonContainer" : "submitButtonContainer2"
-        }
-      >
-        {isLoading && <p className="response__isLoading">updating list...</p>}
-        <button
-          type="submit"
-          className={isDisabled ? "submitButton__disabled" : "submitButton"}
-          disabled={isDisabled}
-          title={isDisabled ? "Fields must not be empty" : null}
-          onClick={submitHandler}
+        <div
+          className={
+            !isLoading ? "submitButtonContainer" : "submitButtonContainer2"
+          }
         >
-          Submit
-        </button>
-      </div>
+          {isLoading && <p className="response__isLoading">updating list...</p>}
+          <button
+            type="submit"
+            className={isDisabled ? "submitButton__disabled" : "submitButton"}
+            disabled={isDisabled}
+            title={isDisabled ? "Fields must not be empty" : null}
+            onClick={submitHandler}
+          >
+            Submit
+          </button>
+        </div>
+      </section>
     </form>
   );
 };

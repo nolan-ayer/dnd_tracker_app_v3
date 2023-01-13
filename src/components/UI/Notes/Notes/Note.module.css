@@ -1,11 +1,28 @@
 .note {
   position: relative;
   padding: 0;
-  margin: 0 0 1rem 0;
-  border: 1px solid white;
+  margin: 0;
+  /* border: 1px solid white; */
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.25);
-  min-height: 8rem;
+  height: 40vh;
+  min-height: 15rem;
+  overflow-y: auto;
+}
+
+.note::-webkit-scrollbar {
+  width: 0.35rem;
+}
+.note::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.note::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: green;
+  border-radius: 15px;
+  outline: 1px solid black;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .modalPlacementHelper {
@@ -21,12 +38,107 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem;
-  margin: 0;
+  align-items: center;
+  /* height: calc(5vh + 1rem); */
+  padding: 0 0 1rem 0;
+  margin: 1rem 1rem 0 1rem;
   border-bottom: 1px solid white;
+  font-size: 2vw;
+}
+
+.noteHeader > section {
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
 }
 
 .noteMain {
-  padding: 1rem 0 1rem 1rem;
+  width: fit-content;
+  padding: 1rem;
   white-space: pre-line;
+  font-size: 0.75vw;
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .noteHeader > section {
+    font-size: 2.5vh;
+  }
+  .noteMain {
+    font-size: 1.75vw;
+  }
+}
+
+@media (min-width: 901px) and (orientation: landscape) {
+  .noteHeader > section {
+    font-size: 2.5vh;
+  }
+  .noteMain {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 1281px) and (orientation: landscape) {
+  .noteHeader {
+    font-size: 1.5vw;
+  }
+  .noteMain {
+    font-size: 1.25vw;
+  }
+}
+
+@media (min-width: 1367px) and (orientation: landscape) {
+  .noteHeader {
+    font-size: 1.5vw;
+  }
+  .noteMain {
+    font-size: 1.25vw;
+  }
+}
+
+@media (min-width: 1601px) and (orientation: landscape) {
+  .noteHeader {
+    font-size: 1vw;
+  }
+  .noteMain {
+    font-size: 0.75vw;
+  }
+}
+
+@media (min-width: 1921px) and (orientation: landscape) {
+  .noteHeader {
+    font-size: 1vw;
+  }
+  .noteMain {
+    font-size: 0.75vw;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .noteHeader {
+    font-size: 3vh;
+  }
+  .noteHeader > section {
+    font-size: 2.5vh;
+  }
+  .noteMain {
+    font-size: 2.5vh;
+  }
+  button {
+    font-size: 2vh;
+  }
+}
+
+@media (min-width: 801px) and (orientation: portrait) {
+  .noteHeader {
+    font-size: 3vh;
+  }
+  .noteHeader > section {
+    font-size: 2.5vh;
+  }
+  .noteMain {
+    font-size: 2.5vh;
+  }
+  button {
+    font-size: 2vh;
+  }
 }

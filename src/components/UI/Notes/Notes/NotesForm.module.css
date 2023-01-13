@@ -1,50 +1,61 @@
 .notesForm {
-  padding: 0 1rem 1rem 0;
-  margin: 0 0 1rem 0;
-  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid white; */
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.25);
 }
 
-.notesInputPlacementHelper {
-  display: flex;
-  padding: 1rem 0 1rem 1rem;
-  flex-direction: column;
-  align-items: flex-start;
-  width: calc(100% - 1rem);
+.notesTitleContainer {
+  height: fit-content;
+  width: calc(100% - 2rem);
+  /* border-bottom: 1px solid white; */
+  margin: 1rem 1rem 0 1rem;
+  padding: 0;
 }
 
 .notesTitleInput {
   resize: none;
-  width: 50%;
+  width: calc(100% - 1rem - 2px);
+  height: fit-content;
+  min-height: 2vw;
   padding: 0.5rem;
-  margin: 0 0 1rem 0;
+  margin: 0;
   border-radius: 15px;
+  font-size: 1.5vw;
 }
 
-.notesTitleInput:focus {
-  outline: 1px solid lightskyblue;
-  box-shadow: 0 0 4px paleturquoise;
-}
-
-.notesTitleInput:hover {
-  box-shadow: 0 0 5px 1px lightblue;
+.noteBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 2rem);
+  height: 100%;
+  margin: 0 1rem 0 1rem;
+  padding: 0;
 }
 
 .notesBodyInput {
   resize: none;
-  height: 5rem;
+  height: 100%;
   width: calc(100% - 2px - 1rem);
   padding: 0.5rem;
   margin: 0;
   border-radius: 15px;
+  font-size: 1.5vw;
 }
 
+.notesTitleInput:focus,
 .notesBodyInput:focus {
   outline: 1px solid lightskyblue;
   box-shadow: 0 0 4px paleturquoise;
 }
 
+.notesTitleInput:hover,
 .notesBodyInput:hover {
   box-shadow: 0 0 5px 1px lightblue;
 }
@@ -53,4 +64,76 @@
   display: flex;
   justify-content: flex-end;
   padding: 0 1rem 0 0;
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .notesTitleInput {
+    font-size: 1.25vw;
+  }
+  .notesBodyInput {
+    font-size: 1.25vw;
+  }
+}
+
+@media (min-width: 901px) and (orientation: landscape) {
+  .notesTitleInput {
+    font-size: 1.25vw;
+  }
+  .notesBodyInput {
+    font-size: 1.25vw;
+  }
+}
+
+@media (min-width: 1281px) and (orientation: landscape) {
+  .notesTitleInput {
+    font-size: 1.25vw;
+  }
+  .notesBodyInput {
+    font-size: 1.25vw;
+  }
+}
+
+@media (min-width: 1367px) and (orientation: landscape) {
+  .notesTitleInput {
+    font-size: 1.25vw;
+  }
+  .notesBodyInput {
+    font-size: 1.25vw;
+  }
+}
+
+@media (min-width: 1601px) and (orientation: landscape) {
+  .notesTitleInput {
+    font-size: 0.75vw;
+  }
+  .notesBodyInput {
+    font-size: 0.75vw;
+  }
+}
+
+@media (min-width: 1921px) and (orientation: landscape) {
+  .notesTitleInput {
+    font-size: 0.75vw;
+  }
+  .notesBodyInput {
+    font-size: 0.75vw;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .notesTitleInput {
+    font-size: 2.5vh;
+  }
+  .notesBodyInput {
+    font-size: 2.5vh;
+  }
+}
+
+@media (min-width: 801px) and (orientation: portrait) {
+  .notesTitleInput {
+    font-size: 2.5vh;
+  }
+  .notesBodyInput {
+    font-size: 2.5vh;
+  }
 }

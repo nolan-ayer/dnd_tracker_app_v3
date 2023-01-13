@@ -12,27 +12,12 @@ body {
   color: white;
   padding: 0;
   margin: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-html {
-  margin: 0 auto;
-  padding: 0;
-}
-
-#__next {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
 }
 
 h3 {
@@ -51,91 +36,38 @@ ul {
   margin: 0;
 }
 
-li {
-  padding: 0 0 0.5rem 0;
-}
-
 article {
   padding-bottom: 1rem;
 }
 
-@media (min-width: 1280px) and (orientation: landscape) {
-  html {
-    /* font-size: medium; */
-  }
+::placeholder,
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1280px) and (orientation: landscape) {
   button {
-    /* font-size: medium; */
-  }
-  input {
-    /* font-size: medium; */
+    font-size: 1.5vh;
   }
 }
 
 @media (min-width: 1281px) and (orientation: landscape) {
-  html {
-    /* font-size: medium; */
-  }
-  input {
-    /* font-size: medium; */
-  }
 }
 
 @media (min-width: 1367px) and (orientation: landscape) {
-  html {
-    /* font-size: large; */
-  }
-  button {
-    /* font-size: large; */
-  }
-  input {
-    /* font-size: large; */
-  }
 }
 
 @media (min-width: 1601px) and (orientation: landscape) {
-  html {
-    /* font-size: x-large; */
-  }
-  button {
-    /* font-size: x-large; */
-  }
-  input {
-    /* font-size: x-large; */
-  }
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
-  html {
-    /* font-size: medium; */
-  }
-  h5 {
-    /* font-size: large; */
-  }
-  h2 {
-    /* font-size: large; */
-  }
-  button {
-    /* font-size: small; */
-  }
-  input {
-    /* font-size: large; */
+  body {
+    font-size: 1.5vh;
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
-  html {
-    /* font-size: large; */
-  }
-  h5 {
-    /* font-size: x-large; */
-  }
-  h2 {
-    /* font-size: x-large; */
-  }
-  button {
-    /* font-size: medium; */
-  }
-  input {
-    /* font-size: large; */
+  body {
+    font-size: 1.5vh;
   }
 }

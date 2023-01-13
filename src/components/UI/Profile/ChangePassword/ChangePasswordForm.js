@@ -86,15 +86,15 @@ const ChangePasswordForm = () => {
 
   return (
     <main className="contentMain">
-      <section className="mainContentsStandalone">
+      <section className="centered">
         Change your password here by entering it here! It must be at least 7
         characters long. We won't enforce the composition of your password
         because you're a grown up and are responsible for your own data, but it
         is STRONGLY recommended that you have at least a couple non-sequential
         numbers and one symbol.
       </section>
-      <form className={styles.changePasswordForm}>
-        <div className="align-left">
+      <form className="contentMainPlacementHelper">
+        <div className="mainContentsStandalone">
           <input
             type="password"
             className={
@@ -108,7 +108,7 @@ const ChangePasswordForm = () => {
             onChange={enteredPasswordChangeHandler}
           />
         </div>
-        <div className="align-left">
+        <div className="mainContentsStandalone">
           <input
             type="password"
             className={

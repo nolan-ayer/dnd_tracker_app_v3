@@ -148,113 +148,111 @@ const CardsForm = (props) => {
           />
         </div>
       ) : null}
-      <div className={styles.cardsFormPlacementHelper}>
-        <div className={styles.cardInputContainerName}>
+      <div className={styles.cardNameContainer}>
+        <input
+          className={styles.cardNameInput}
+          type="text"
+          value={playerName}
+          onChange={nameChangeHandler}
+          title="Name"
+          placeholder="Name"
+        />
+        <button
+          onClick={resetHandler}
+          className={isDisabled ? "submitButton__disabled" : "submitButton"}
+          type="submit"
+          disabled={isDisabled}
+          title={isDisabled ? "Enter something to clear it" : null}
+        >
+          Reset
+        </button>
+      </div>
+
+      <div className={styles.cardsFormMain}>
+        <section className={styles.attributeRow}>
           <input
-            className={styles.cardInputFieldName}
-            type="text"
-            value={playerName}
-            onChange={nameChangeHandler}
-            title="Name"
-            placeholder="Name"
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerLvlRef}
+            title="Level"
+            placeholder="LVL"
           />
+        </section>
+        <section className={styles.attributeRow2}>
+          <input
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerStrRef}
+            title="Strength"
+            placeholder="STR"
+          />
+          <input
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerFinRef}
+            title="Finesse"
+            placeholder="FIN"
+          />
+          <input
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerIntRef}
+            title="Intelligence "
+            placeholder="INT"
+          />
+        </section>
+        <section className={styles.attributeRow2}>
+          <input
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerConRef}
+            title="Constitution"
+            placeholder="CON"
+          />
+          <input
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerMemRef}
+            title="Memory"
+            placeholder="MEM"
+          />
+          <input
+            className="inputField"
+            type="number"
+            min="1"
+            max="20"
+            ref={playerWitRef}
+            title="Wits"
+            placeholder="WIT"
+          />
+        </section>
+        <nav className="submitButtonContainer">
           <button
-            onClick={resetHandler}
             className={isDisabled ? "submitButton__disabled" : "submitButton"}
             type="submit"
+            onClick={submitHandler}
             disabled={isDisabled}
-            title={isDisabled ? "Enter something to clear it" : null}
+            title={
+              isDisabled
+                ? "Please fill out all entries before submitting"
+                : null
+            }
           >
-            Reset
+            Submit
           </button>
-        </div>
-
-        <div className={styles.cardsFormMain}>
-          <section className={styles.attributeRow}>
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerLvlRef}
-              title="Level"
-              placeholder="LVL"
-            />
-          </section>
-          <section className={styles.attributeRow2}>
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerStrRef}
-              title="Strength"
-              placeholder="STR"
-            />
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerFinRef}
-              title="Finesse"
-              placeholder="FIN"
-            />
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerIntRef}
-              title="Intelligence "
-              placeholder="INT"
-            />
-          </section>
-          <section className={styles.attributeRow2}>
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerConRef}
-              title="Constitution"
-              placeholder="CON"
-            />
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerMemRef}
-              title="Memory"
-              placeholder="MEM"
-            />
-            <input
-              className="inputField"
-              type="number"
-              min="1"
-              max="20"
-              ref={playerWitRef}
-              title="Wits"
-              placeholder="WIT"
-            />
-          </section>
-          <nav className="submitButtonContainer">
-            <button
-              className={isDisabled ? "submitButton__disabled" : "submitButton"}
-              type="submit"
-              onClick={submitHandler}
-              disabled={isDisabled}
-              title={
-                isDisabled
-                  ? "Please fill out all entries before submitting"
-                  : null
-              }
-            >
-              Submit
-            </button>
-          </nav>
-        </div>
+        </nav>
       </div>
     </form>
   );

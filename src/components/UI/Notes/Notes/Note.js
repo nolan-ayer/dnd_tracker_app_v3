@@ -35,7 +35,7 @@ const Note = (props) => {
         </div>
       ) : null}
       <h5 className={styles.noteHeader}>
-        {props.title}
+        <section>{props.title}</section>
         <nav>
           <button
             className="submitButton"

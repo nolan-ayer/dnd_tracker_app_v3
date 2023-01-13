@@ -1,19 +1,13 @@
 .cardsForm {
   display: grid;
   position: relative;
-  border: 1px white solid;
+  /* border: 1px white solid; */
   border-radius: 15px;
-  padding: 0;
+  padding: 1rem 1rem 0 1rem;
   margin: 0;
   background: rgba(0, 0, 0, 0.25);
-}
-
-.cardsFormPlacementHelper {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  position: relative;
-  margin: 1rem;
+  min-height: 32vh;
+  height: calc(100% - 1rem);
 }
 
 .modalPlacementHelper {
@@ -34,7 +28,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
 .attributeRow {
@@ -49,62 +43,110 @@
   width: 100%;
 }
 
-.cardInputContainerName {
+.cardNameContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0.5rem 0;
   border-bottom: 1px solid white;
+  height: calc(2vh + 1rem);
 }
 
-.cardInputFieldName {
+.cardNameInput {
   resize: none;
-  width: fit-content;
+  height: calc(2vh + 0.5rem);
   width: 100%;
   padding: 0.5rem;
   margin: 0 0.5rem 0 0;
   border-radius: 15px;
+  border: none;
 }
 
-.cardInputFieldName:focus {
+.cardNameInput:focus {
   outline: 1px solid lightskyblue;
   box-shadow: 0 0 4px paleturquoise;
 }
 
-.cardInputField {
-  resize: none;
-  width: 60%;
-  padding: 0.5rem;
-  margin: 0;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.cardInputField:focus {
-  outline: 1px solid lightskyblue;
-  box-shadow: 0 0 4px paleturquoise;
-}
-
-.cardInputFieldName:hover {
+.cardNameInput:hover {
   box-shadow: 0 0 5px 1px lightblue;
 }
 
-.cardInputFieldName::placeholder {
-  color: lightgray;
+@media (max-width: 1279px) and (orientation: landscape) {
+  .cardsForm {
+    /* height: calc(32vh + 1rem); */
+  }
+  .attributeRow,
+  .attributeRow2 {
+    justify-content: space-around;
+  }
+  .cardNameInput {
+    height: 2.5vh;
+    margin: 0 0.5rem 0 0;
+    font-size: 2.5vh;
+  }
 }
 
-.cardInputField:hover {
-  box-shadow: 0 0 5px 1px lightblue;
+@media (min-width: 1280) and (orientation: landscape) {
+  .cardsForm {
+    /* height: calc(32vh + 1rem); */
+  }
 }
 
-.cardInputField::placeholder {
-  color: lightgray;
+@media (min-width: 1366) and (orientation: landscape) {
+  .cardsForm {
+    /* height: calc(32vh + 1rem); */
+  }
 }
 
-.submitButtonContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 1rem;
+@media (min-width: 1600) and (orientation: landscape) {
+  .cardsForm {
+    font-size: 0.75vw;
+    /* height: calc(32vh + 1rem); */
+  }
+}
+
+@media (min-width: 1920) and (orientation: landscape) {
+  .cardsForm {
+    font-size: 0.75vw;
+    /* height: calc(32vh + 1rem); */
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .cardsForm {
+    height: 48vh;
+    margin-bottom: 1rem;
+    font-size: 2.5vh;
+    margin: 0;
+  }
+  .cardsFormMain {
+    justify-content: space-between;
+  }
+  .cardNameContainer {
+    height: calc(5vh + 1rem);
+  }
+  .cardNameInput {
+    height: 5vh;
+    font-size: 2.5vh;
+  }
+}
+
+@media (min-width: 801px) and (orientation: portrait) {
+  .cardsForm {
+    height: 48vh;
+    margin-bottom: 1rem;
+    font-size: 2.5vh;
+    margin: 0;
+  }
+  .cardsFormMain {
+    justify-content: space-between;
+  }
+  .cardNameContainer {
+    height: calc(5vh + 1rem);
+  }
+  .cardNameInput {
+    height: 5vh;
+    font-size: 2.5vh;
+  }
 }

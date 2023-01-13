@@ -8,8 +8,15 @@ const HeaderMain = () => {
   return (
     <>
       <header className={styles.headerMain}>
-        <Link to="/" className={styles.titleButton}>
-          <section className={styles.headerTitle}>Dnd Tracker App</section>
+        <Link
+          to="/"
+          className={
+            window.location.pathname === "/"
+              ? styles.titleButton__selected
+              : styles.titleButton
+          }
+        >
+          <section className={styles.headerTitle}>>tracker app</section>
         </Link>
         <HeaderNav />
       </header>
