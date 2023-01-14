@@ -5,25 +5,22 @@
   align-items: center;
   padding: 0;
   margin: 0;
-  /* border: 1px solid white; */
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
-  max-height: 24vh;
+  min-height: 24vh;
 }
 
 .notesTitleContainer {
   height: fit-content;
   width: calc(100% - 2rem);
-  /* border-bottom: 1px solid white; */
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 1rem 0.25rem 1rem;
   padding: 0;
 }
 
 .notesTitleInput {
   resize: none;
   width: calc(100% - 1rem - 2px);
-  /* height: 0.75vh; */
   min-height: 2vw;
   padding: 0.5rem;
   margin: 0;
@@ -43,7 +40,7 @@
 
 .notesBodyInput {
   resize: none;
-  height: 6vh;
+  height: 100%;
   width: calc(100% - 2px - 1rem);
   padding: 0.5rem;
   margin: 0;
@@ -92,33 +89,40 @@
   }
   .notesBodyInput {
     font-size: 1.25vw;
+    height: 100%;
   }
 }
 
 @media (min-width: 1367px) and (orientation: landscape) {
   .notesTitleInput {
     font-size: 1.25vw;
+    height: 3vh;
   }
   .notesBodyInput {
     font-size: 1.25vw;
+    height: 100%;
   }
 }
 
 @media (min-width: 1601px) and (orientation: landscape) {
   .notesTitleInput {
     font-size: 0.75vw;
+    height: 3vh;
   }
   .notesBodyInput {
     font-size: 0.75vw;
+    height: 100%;
   }
 }
 
 @media (min-width: 1921px) and (orientation: landscape) {
   .notesTitleInput {
     font-size: 0.75vw;
+    height: 3vh;
   }
   .notesBodyInput {
     font-size: 0.75vw;
+    height: 100%;
   }
 }
 
