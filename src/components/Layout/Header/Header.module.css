@@ -88,15 +88,18 @@
 
 .navButton__selected:hover {
   cursor: default;
+
+  /* background-color: rgba(0, 128, 128, 0.8); */
 }
 
 .navButton:hover,
 .navButton__selected:hover {
   transition: all 150ms ease-in;
-  text-shadow: 0 0 4px white;
-  text-shadow: 0 0 6px white;
-  text-shadow: 0 0 10px palegoldenrod;
-  text-shadow: 0 0 12px palegoldenrod;
+  /* text-shadow: 0 0 4px white; */
+  /* text-shadow: 0 0 6px white; */
+  /* text-shadow: 0 0 10px palegoldenrod; */
+  /* text-shadow: 0 0 12px palegoldenrod; */
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
 }
 
 /* @media (min-width: 1280px) and (orientation: landscape) {

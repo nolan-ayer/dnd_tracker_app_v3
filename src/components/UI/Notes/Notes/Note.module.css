@@ -8,6 +8,7 @@
   height: 40vh;
   min-height: 15rem;
   overflow-y: auto;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
 }
 
 .note::-webkit-scrollbar {

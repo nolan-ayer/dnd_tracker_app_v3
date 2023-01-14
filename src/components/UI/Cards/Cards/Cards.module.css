@@ -10,6 +10,7 @@
   /* height: 25vh; */
   font-size: 1.5vw;
   min-height: 15rem;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
 }
 
 .cardHeader {
