@@ -5,25 +5,9 @@
   /* border: 1px solid white; */
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.25);
-  height: 40vh;
-  min-height: 15rem;
+  max-height: 24vh;
   overflow-y: auto;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
-}
-
-.note::-webkit-scrollbar {
-  width: 0.35rem;
-}
-.note::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.note::-webkit-scrollbar-thumb {
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: green;
-  border-radius: 15px;
-  outline: 1px solid black;
-  background: rgba(0, 0, 0, 0.25);
 }
 
 .modalPlacementHelper {
@@ -138,6 +122,7 @@
   }
   .noteMain {
     font-size: 2.5vh;
+    height: 12vh;
   }
   button {
     font-size: 2vh;

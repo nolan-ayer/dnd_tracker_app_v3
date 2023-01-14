@@ -9,6 +9,7 @@
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
+  max-height: 24vh;
 }
 
 .notesTitleContainer {
@@ -22,12 +23,12 @@
 .notesTitleInput {
   resize: none;
   width: calc(100% - 1rem - 2px);
-  height: fit-content;
+  /* height: 0.75vh; */
   min-height: 2vw;
   padding: 0.5rem;
   margin: 0;
   border-radius: 15px;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
 }
 
 .noteBody {
@@ -42,12 +43,12 @@
 
 .notesBodyInput {
   resize: none;
-  height: 100%;
+  height: 6vh;
   width: calc(100% - 2px - 1rem);
   padding: 0.5rem;
   margin: 0;
   border-radius: 15px;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
 }
 
 .notesTitleInput:focus,
@@ -122,19 +123,32 @@
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
+  .notesForm {
+    max-height: fit-content;
+  }
   .notesTitleInput {
     font-size: 2.5vh;
+    height: 4vh;
   }
   .notesBodyInput {
     font-size: 2.5vh;
+    height: 12vh;
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
+  .notesForm {
+    max-height: fit-content;
+  }
+  .notesTitleContainer {
+    margin-bottom: 1rem;
+  }
   .notesTitleInput {
     font-size: 2.5vh;
+    height: 4vh;
   }
   .notesBodyInput {
     font-size: 2.5vh;
+    height: 12vh;
   }
 }

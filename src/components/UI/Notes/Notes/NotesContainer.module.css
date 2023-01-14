@@ -39,6 +39,9 @@
   .notesContainer {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 2rem 6rem;
   }
 }
 
@@ -46,5 +49,8 @@
   .notesContainer {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 2rem 6rem;
   }
 }

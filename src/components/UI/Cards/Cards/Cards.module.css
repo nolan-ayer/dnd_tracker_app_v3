@@ -27,21 +27,6 @@
   margin: 0 0.5rem 0 0;
 }
 
-.card::-webkit-scrollbar {
-  width: 0.35rem;
-}
-.card::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.card::-webkit-scrollbar-thumb {
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: green;
-  border-radius: 15px;
-  outline: 1px solid black;
-  background: rgba(0, 0, 0, 0.25);
-}
-
 .modalPlacementHelper {
   position: absolute;
   top: 0;
@@ -76,12 +61,6 @@
   height: 30%;
   width: 100%;
 }
-
-/* .attributeRow > li,
-.attributeRow2 > li {
-  margin: 0 0.2rem;
-  font-size: 1vw;
-} */
 
 .cardButtonContainer__One {
   padding: 0;
@@ -174,14 +153,14 @@
 @media (max-width: 800px) and (orientation: portrait) {
   .card {
     min-height: 48vh;
-    font-size: 2.5vh;
+    font-size: 2vh;
     margin: 0;
   }
   .cardHeader {
     height: calc(5vh + 1rem);
   }
   .cardTitle {
-    font-size: 3vh;
+    font-size: 2vh;
   }
 }
 
@@ -195,6 +174,6 @@
     height: calc(5vh + 1rem);
   }
   .cardTitle {
-    font-size: 3vh;
+    font-size: 2.5vh;
   }
 }

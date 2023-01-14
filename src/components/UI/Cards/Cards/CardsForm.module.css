@@ -134,6 +134,10 @@
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
+  .attributeRow,
+  .attributeRow2 {
+    justify-content: space-around;
+  }
   .cardsForm {
     height: 48vh;
     margin-bottom: 1rem;

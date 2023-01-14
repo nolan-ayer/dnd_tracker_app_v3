@@ -42,7 +42,21 @@ article {
 
 ::placeholder,
 ::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(32, 32, 32);
+}
+
+::-webkit-scrollbar {
+  width: 0.35rem;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(16, 16, 16);
+}
+::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 15px;
+  outline: 1px solid black;
+  background: rgba(16, 16, 16);
 }
 
 @media (max-width: 1280px) and (orientation: landscape) {
