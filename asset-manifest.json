@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.07120385.css",
-    "main.js": "/static/js/main.a7c116b3.js",
-    "index.html": "/index.html",
-    "main.07120385.css.map": "/static/css/main.07120385.css.map",
-    "main.a7c116b3.js.map": "/static/js/main.a7c116b3.js.map"
+    "main.css": "/rpgTrackerApp/static/css/main.07120385.css",
+    "main.js": "/rpgTrackerApp/static/js/main.a7c116b3.js",
+    "index.html": "/rpgTrackerApp/index.html",
+    "main.07120385.css.map": "/rpgTrackerApp/static/css/main.07120385.css.map",
+    "main.a7c116b3.js.map": "/rpgTrackerApp/static/js/main.a7c116b3.js.map"
   },
   "entrypoints": [
     "static/css/main.07120385.css",
