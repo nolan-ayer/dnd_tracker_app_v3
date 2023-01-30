@@ -86,12 +86,10 @@ const Card = (props) => {
         <section className={styles.attributeRow}>
           <li>LVL: {props.lvl}</li>
         </section>
-        <section className={styles.attributeRow2}>
+        <section className={styles.attributeGrid}>
           <li>STR: {props.str}</li>
           <li>FIN: {props.fin}</li>
           <li>INT: {props.int}</li>
-        </section>
-        <section className={styles.attributeRow2}>
           <li>CON: {props.con}</li>
           <li>MEM: {props.mem}</li>
           <li>WIT: {props.wit}</li>

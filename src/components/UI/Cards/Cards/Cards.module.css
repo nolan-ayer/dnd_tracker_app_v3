@@ -9,7 +9,7 @@
   background: rgba(0, 0, 0, 0.25);
   /* height: 25vh; */
   font-size: 1.5vw;
-  min-height: 15rem;
+  height: 20vmin;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -40,26 +40,19 @@
 .cardInner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 1rem 0 0 0;
-  height: calc(100% - 4rem);
+  height: 10vmin;
 }
 
-.attributeRow {
-  display: flex;
-  justify-content: center;
-}
-
-.attributeRow2 {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.attributeRow,
-.attributeRow2 {
-  height: 30%;
-  width: 100%;
+.attributeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 2vmin;
+  row-gap: 2vmin;
+  margin-top: 2vmin;
 }
 
 .cardButtonContainer__One {

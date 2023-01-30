@@ -12,7 +12,7 @@ body {
   color: white;
   padding: 0;
   margin: 0;
-  font-size: 1vw;
+  font-size: 2vmin;
 }
 
 code {
@@ -23,6 +23,7 @@ code {
 h3 {
   margin: 0;
   padding: 0;
+  font-size: 3.5vmin;
 }
 
 h5 {
@@ -76,12 +77,12 @@ article {
 
 @media (max-width: 800px) and (orientation: portrait) {
   body {
-    font-size: 1.5vh;
+    font-size: 2vmin;
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
   body {
-    font-size: 1.5vh;
+    font-size: 2vmin;
   }
 }
