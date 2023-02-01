@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/rpgTrackerApp/static/css/main.07120385.css",
-    "main.js": "/rpgTrackerApp/static/js/main.a7c116b3.js",
-    "index.html": "/rpgTrackerApp/index.html",
-    "main.07120385.css.map": "/rpgTrackerApp/static/css/main.07120385.css.map",
-    "main.a7c116b3.js.map": "/rpgTrackerApp/static/js/main.a7c116b3.js.map"
+    "main.css": "/dnd_tracker_app_v3/static/css/main.07120385.css",
+    "main.js": "/dnd_tracker_app_v3/static/js/main.a7c116b3.js",
+    "index.html": "/dnd_tracker_app_v3/index.html",
+    "main.07120385.css.map": "/dnd_tracker_app_v3/static/css/main.07120385.css.map",
+    "main.a7c116b3.js.map": "/dnd_tracker_app_v3/static/js/main.a7c116b3.js.map"
   },
   "entrypoints": [
     "static/css/main.07120385.css",
