@@ -43,7 +43,9 @@ const Note = (props) => {
               setShowRemoveModal(true);
             }}
           >
-            Delete
+            <span class="material-icons md-light" title="Delete">
+              delete
+            </span>
           </button>
         </nav>
       </h5>

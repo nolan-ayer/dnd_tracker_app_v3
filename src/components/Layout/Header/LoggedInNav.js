@@ -13,39 +13,47 @@ const LoggedInNav = () => {
     <>
       <nav className={styles.navContainer}>
         <Link
-          to="/profile"
           className={
             window.location.pathname === "/profile"
               ? styles.navButton__selected
               : styles.navButton
           }
+          title="Profile"
+          to="/profile"
         >
-          Profile
+          <span class="material-icons md-light">person</span>
         </Link>
         <Link
-          to="/cards"
           className={
             window.location.pathname === "/cards"
               ? styles.navButton__selected
               : styles.navButton
           }
+          title="Cards"
+          to="/cards"
         >
-          Cards
+          <span class="material-icons md-light">note_add</span>
         </Link>
 
         <Link
-          to="/notes"
           className={
             window.location.pathname === "/notes"
               ? styles.navButton__selected
               : styles.navButton
           }
+          title="Notes"
+          to="/notes"
         >
-          Notes
+          <span class="material-icons md-light">description</span>
         </Link>
 
-        <Link to="/" className={styles.navButton} onClick={logout}>
-          Logout
+        <Link
+          className={styles.navButton}
+          onClick={logout}
+          title="Logout"
+          to="/"
+        >
+          <span class="material-icons md-light">logout</span>
         </Link>
       </nav>
     </>

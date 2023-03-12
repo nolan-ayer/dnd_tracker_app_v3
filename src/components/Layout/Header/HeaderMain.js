@@ -18,7 +18,9 @@ const HeaderMain = () => {
               : styles.titleButton
           }
         >
-          <section className={styles.headerTitle}>{`[some_logo_here]`}</section>
+          <section className={styles.headerTitle}>
+            <span class="material-icons md-light">home</span>
+          </section>
         </Link>
         <HeaderNav />
       </header>

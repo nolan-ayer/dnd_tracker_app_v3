@@ -1,65 +1,52 @@
-.card {
-  position: relative;
-  /* border: 1px white solid; */
-  border-radius: 15px;
-  padding: 1rem 1rem 0 1rem;
-  margin: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: rgba(0, 0, 0, 0.25);
-  /* height: 25vh; */
-  font-size: 1.5vw;
-  height: 20vmin;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
-}
-
-.cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: calc(2vh + 1rem);
-  padding: 0 0 0.5rem 0;
-  border-bottom: 1px white solid;
-}
-
-.cardTitle {
-  padding: 0;
-  margin: 0 0.5rem 0 0;
-}
-
-.modalPlacementHelper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-}
-
-.cardInner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0 0 0;
-  height: 10vmin;
-}
-
 .attributeGrid {
+  column-gap: 2vmin;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 2vmin;
   row-gap: 2vmin;
-  margin-top: 2vmin;
+  text-align: center;
 }
 
-.cardButtonContainer__One {
+.card {
+  aspect-ratio: 5/7;
+  background-color: rgb(60, 60, 60);
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px 1px rgba(60, 60, 60, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+  padding: 5vmin;
+  position: relative;
+  width: auto;
+}
+
+.cardButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   padding: 0;
 }
 
-@media (max-width: 799px) and (orientation: landscape) {
+.cardTitle {
+  text-align: center;
+  box-sizing: border-box;
+  height: auto;
+  padding: 0;
+}
+
+.modalPlacementHelper {
+  border-radius: 15px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* @media (max-width: 799px) and (orientation: landscape) {
   .card {
     min-height: 32vh;
   }
@@ -141,32 +128,24 @@
     margin: 0 0.2rem;
     font-size: 1vw;
   }
-}
+}*/
 
 @media (max-width: 800px) and (orientation: portrait) {
   .card {
-    min-height: 48vh;
-    font-size: 2vh;
-    margin: 0;
+    width: fit-content;
   }
   .cardHeader {
-    height: calc(5vh + 1rem);
   }
   .cardTitle {
-    font-size: 2vh;
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
   .card {
-    min-height: 48vh;
-    font-size: 2.5vh;
-    margin: 0;
+    width: fit-content;
   }
   .cardHeader {
-    height: calc(5vh + 1rem);
   }
   .cardTitle {
-    font-size: 2.5vh;
   }
 }

@@ -66,38 +66,39 @@ const Card = (props) => {
           />
         </div>
       ) : null}
-      <span className={styles.cardHeader}>
-        <h5 className={styles.cardTitle}>{props.name}</h5>
-        <nav className={styles.cardButtonContainer__One}>
-          <button className="submitButton" onClick={showEditHandler}>
-            Edit
-          </button>
-          <button
-            className="submitButton"
-            onClick={() => {
-              setShowRemoveModal(true);
-            }}
-          >
-            Delete
-          </button>
-        </nav>
-      </span>
-      <ul className={styles.cardInner}>
-        <section className={styles.attributeRow}>
-          <li>LVL: {props.lvl}</li>
-        </section>
-        <section className={styles.attributeGrid}>
-          <li>STR: {props.str}</li>
-          <li>FIN: {props.fin}</li>
-          <li>INT: {props.int}</li>
-          <li>CON: {props.con}</li>
-          <li>MEM: {props.mem}</li>
-          <li>WIT: {props.wit}</li>
-        </section>
+      <h5 className={styles.cardTitle}>{props.name}</h5>
+      <ul className={styles.attributeGrid}>
+        <li />
+        <li>LVL: {props.lvl}</li>
+        <li />
+        <li>STR: {props.str}</li>
+        <li>FIN: {props.fin}</li>
+        <li>INT: {props.int}</li>
+        <li>CON: {props.con}</li>
+        <li>MEM: {props.mem}</li>
+        <li>WIT: {props.wit}</li>
       </ul>
       {/* <ul className={styles.cardInnerTwo__One}>
 
       </ul> */}
+      <nav className={styles.cardButtonContainer}>
+        <button
+          class="material-icons md-light edit"
+          onClick={showEditHandler}
+          title="Edit"
+        >
+          edit
+        </button>
+        <button
+          class="material-icons md-light delete"
+          onClick={() => {
+            setShowRemoveModal(true);
+          }}
+          title="Delete"
+        >
+          delete
+        </button>
+      </nav>
     </li>
   );
 };

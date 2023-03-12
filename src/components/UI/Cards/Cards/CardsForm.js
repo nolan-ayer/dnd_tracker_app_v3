@@ -139,105 +139,117 @@ const CardsForm = (props) => {
   };
 
   return (
-    <form className={styles.cardsForm}>
-      {showModal ? (
-        <div className={styles.modalPlacementHelper}>
-          <AddCardErrorModal
-            show={showModal}
-            hide={() => setShowModal(false)}
+    <div className={styles.cardsFormContainer}>
+      <form className={styles.cardsForm}>
+        {showModal ? (
+          <div className={styles.modalPlacementHelper}>
+            <AddCardErrorModal
+              show={showModal}
+              hide={() => setShowModal(false)}
+            />
+          </div>
+        ) : null}
+        <div className={styles.cardNameContainer}>
+          <input
+            className={styles.cardNameInput}
+            type="text"
+            value={playerName}
+            onChange={nameChangeHandler}
+            title="Name"
+            placeholder="Name"
           />
+          <button
+            onClick={resetHandler}
+            className={isDisabled ? "submitButton__disabled" : "submitButton"}
+            type="submit"
+            disabled={isDisabled}
+            title={isDisabled ? "Enter something to clear it" : null}
+          >
+            <span class="material-icons md-light">undo</span>
+          </button>
         </div>
-      ) : null}
-      <div className={styles.cardNameContainer}>
-        <input
-          className={styles.cardNameInput}
-          type="text"
-          value={playerName}
-          onChange={nameChangeHandler}
-          title="Name"
-          placeholder="Name"
-        />
-        <button
-          onClick={resetHandler}
-          className={isDisabled ? "submitButton__disabled" : "submitButton"}
-          type="submit"
-          disabled={isDisabled}
-          title={isDisabled ? "Enter something to clear it" : null}
-        >
-          Reset
-        </button>
-      </div>
 
-      <div className={styles.cardsFormMain}>
-        <section className={styles.attributeRow}>
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerLvlRef}
-            title="Level"
-            placeholder="LVL"
-          />
-        </section>
-        <section className={styles.attributeRow2}>
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerStrRef}
-            title="Strength"
-            placeholder="STR"
-          />
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerFinRef}
-            title="Finesse"
-            placeholder="FIN"
-          />
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerIntRef}
-            title="Intelligence "
-            placeholder="INT"
-          />
-        </section>
-        <section className={styles.attributeRow2}>
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerConRef}
-            title="Constitution"
-            placeholder="CON"
-          />
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerMemRef}
-            title="Memory"
-            placeholder="MEM"
-          />
-          <input
-            className="inputField"
-            type="number"
-            min="1"
-            max="20"
-            ref={playerWitRef}
-            title="Wits"
-            placeholder="WIT"
-          />
-        </section>
+        <ul className={styles.attributes}>
+          <li />
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerLvlRef}
+              title="Level"
+              placeholder="LVL"
+            />
+          </li>
+          <li />
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerStrRef}
+              title="Strength"
+              placeholder="STR"
+            />
+          </li>
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerFinRef}
+              title="Finesse"
+              placeholder="FIN"
+            />
+          </li>
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerIntRef}
+              title="Intelligence "
+              placeholder="INT"
+            />
+          </li>
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerConRef}
+              title="Constitution"
+              placeholder="CON"
+            />
+          </li>
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerMemRef}
+              title="Memory"
+              placeholder="MEM"
+            />
+          </li>
+          <li>
+            <input
+              className="inputField"
+              type="number"
+              min="1"
+              max="20"
+              ref={playerWitRef}
+              title="Wits"
+              placeholder="WIT"
+            />
+          </li>
+        </ul>
         <nav className="submitButtonContainer">
           <button
             className={isDisabled ? "submitButton__disabled" : "submitButton"}
@@ -250,11 +262,11 @@ const CardsForm = (props) => {
                 : null
             }
           >
-            Submit
+            <span class="material-icons md-light">save</span>
           </button>
         </nav>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

@@ -1,50 +1,47 @@
 .headerMain {
+  align-items: center;
+  background-color: rgb(60, 60, 60);
+  border-bottom: 1px white solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-bottom: 1px white solid;
   margin: 0;
+  padding: 0;
+  width: 100vw;
 }
 
 .headerTitle {
+  padding: 2vmin 0 2vmin 2vmin;
   text-align: center;
-  padding: 0;
-  margin: 0.5rem;
 }
 
 .navContainer {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: flex-end;
-  padding: 0 0.2rem;
-  width: 100%;
+  padding: 0 3vmin;
 }
 
 .titleButton {
-  text-decoration: none;
   margin: 0 0.2rem;
+  text-decoration: none;
 }
 
 .titleButton:hover {
-  cursor: pointer;
-  /* transition: 350ms; */
-  /* background-color: rgba(0, 0, 0, 0.25); */
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .titleButton__selected {
-  display: flex;
-  text-decoration: none;
-  margin: 0 0.2rem;
+  align-items: center;
+  background: transparent;
   border: none;
   border-radius: 15px;
-  background: transparent;
   color: white;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  margin: 0 0.2rem;
+  text-decoration: none;
 }
 
 .titleButton__selected:hover {
@@ -52,54 +49,49 @@
 }
 
 .navButton {
-  display: flex;
-  text-decoration: none;
-  padding: 0.5vh;
-  margin: 0.5vw;
-  height: 3vw;
-  width: 5vw;
+  align-items: center;
+  background: transparent;
   border: none;
   border-radius: 15px;
-  background: transparent;
   color: white;
-  align-items: center;
+  display: flex;
+  height: 3vmin;
   justify-content: center;
+  margin: 0 0.5vmin;
+  padding: 2vmin;
+  text-decoration: none;
+  width: fit-content;
 }
 
 .navButton:hover {
-  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .navButton__selected {
-  display: flex;
-  text-decoration: none;
-  padding: 0.5vh;
-  margin: 0.5vw;
-  height: 3vw;
-  width: 5vw;
-  border: none;
-  border-radius: 15px;
+  align-items: center;
   background: teal;
   color: white;
-  align-items: center;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  height: 3vmin;
   justify-content: center;
+  margin: 0 0.5vmin;
+  padding: 2vmin;
+  text-decoration: none;
+  width: fit-content;
 }
 
 .navButton__selected:hover {
-  cursor: default;
-
   background-color: rgba(0, 128, 128, 0.8);
+  cursor: default;
 }
 
 .navButton:hover,
 .navButton__selected:hover {
-  transition: all 150ms ease-in;
-  /* text-shadow: 0 0 4px white; */
-  /* text-shadow: 0 0 6px white; */
-  /* text-shadow: 0 0 10px palegoldenrod; */
-  /* text-shadow: 0 0 12px palegoldenrod; */
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
+  transition: all 150ms ease-in;
 }
 
 /* @media (min-width: 1280px) and (orientation: landscape) {
@@ -134,54 +126,50 @@
 
 @media (max-width: 799px) and (orientation: portrait) {
   .headerMain {
-    padding: 0;
     border: none;
+    padding: 0;
   }
   .navContainer {
     height: 8vh;
     padding: 0;
   }
   .navButton {
-    /* font-size: 2.5vw; */
-    width: fit-content;
-    height: 100%;
-    border-radius: 0;
     border: none;
+    border-radius: 0;
+    height: 100%;
     padding: 0 1rem 0 1rem;
+    width: fit-content;
   }
   .navButton__selected {
-    /* font-size: 2.5vw; */
-    width: fit-content;
-    height: 100%;
-    border-radius: 0;
     border: none;
+    border-radius: 0;
+    height: 100%;
     padding: 0 1rem 0 1rem;
+    width: fit-content;
   }
 }
 
 @media (min-width: 800px) and (orientation: portrait) {
   .headerMain {
-    padding: 0;
     border: none;
+    padding: 0;
   }
   .navContainer {
     height: 8vh;
     padding: 0.2rem 0;
   }
   .navButton {
-    /* font-size: 2.5vw; */
-    width: fit-content;
-    height: 100%;
-    border-radius: 0;
     border: none;
+    border-radius: 0;
+    height: 100%;
     padding: 0 1rem 0 1rem;
+    width: fit-content;
   }
   .navButton__selected {
-    /* font-size: 2.5vw; */
-    width: fit-content;
-    height: 100%;
-    border-radius: 0;
-    padding: 0 1rem 0 1rem;
     border: none;
+    border-radius: 0;
+    height: 100%;
+    padding: 0 1rem 0 1rem;
+    width: fit-content;
   }
 }

@@ -1,40 +1,5 @@
-.contentMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 1rem 0 0 0;
-}
-
-.contentMainPlacementHelper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 3rem;
-  margin: 0 0 1rem 0;
-  width: calc(40% + 6rem);
-  background: rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  border-radius: 15px;
-}
-
-.mainContents {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.mainContentsStandalone {
-  text-align: center;
-  padding: 0.5rem 0;
-  margin: 0;
-  width: calc(40% + 6rem);
+a:visited {
+  color: white;
 }
 
 .align-left {
@@ -44,17 +9,51 @@
   width: 100%;
 }
 
-.centered {
-  display: inline-block;
-  justify-content: center;
+.contentMain {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0 0 0;
   text-align: center;
-  padding: 2vmin 0;
-  width: calc(40% + 6rem);
 }
 
-a:visited {
+.contentMainPlacementHelper {
+  align-items: center;
+  background-color: rgb(60, 60, 60);
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0 2vmin 0;
+  padding: 4vmin;
+  text-align: center;
+  width: calc(40% + 8vmin);
+}
+
+.centered {
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+  padding: 2vmin 0;
+  text-align: center;
+  width: calc(40% + 8vmin);
+}
+
+.deleteButton {
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: salmon;
+  border: none;
   color: white;
+  transform: scale(1.05);
+}
+
+.deleteButton__disabled {
+  cursor: default;
 }
 
 .embeddedLink {
@@ -72,13 +71,11 @@ a:visited {
 }
 
 .inputField {
-  resize: none;
-  padding: 0;
-  margin: 0.5vw 0;
+  /* height: 4vmin; */
   border-radius: 15px;
   border: none;
+  resize: none;
   text-align: center;
-  height: 4vmin;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -87,51 +84,28 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .inputField:focus {
-  outline: 1px solid lightskyblue;
   box-shadow: 0 0 4px paleturquoise;
+  outline: 1px solid lightskyblue;
 }
 
 .inputField:hover {
   box-shadow: 0 0 5px 1px lightblue;
 }
 
-.submitButton {
-  cursor: pointer;
-}
-
-.submitButton__disabled {
-  cursor: default;
-}
-
-.submitButtonContainer {
+.mainContents {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  flex-direction: column;
+  margin: 0;
   padding: 0;
-  margin: 1rem 0 1rem 0;
-}
-
-.submitButtonContainer2 {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   width: 100%;
-  padding: 0;
-  margin: 1rem 0 1rem 0;
 }
 
-.deleteButton {
-  cursor: pointer;
-}
-
-.deleteButton:hover {
-  border: none;
-  transform: scale(1.05);
-  color: white;
-  background-color: salmon;
-}
-
-.deleteButton__disabled {
-  cursor: default;
+.mainContentsStandalone {
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+  width: calc(40% + 8vmin);
 }
 
 .response__invalid {
@@ -144,7 +118,39 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0 0 0 1rem;
 }
 
-@media (max-width: 1279px) and (orientation: landscape) {
+.submitButton {
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  justify-content: center;
+  padding: 0;
+  width: max-content;
+}
+
+.submitButton__disabled {
+  cursor: default;
+}
+
+.submitButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+.submitButtonContainer2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* @media (max-width: 1279px) and (orientation: landscape) {
   .inputField {
     width: 7vw;
   }
@@ -172,7 +178,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .inputField {
     height: 8vh;
     width: 22vw;
-    /* font-size: 2vh; */
   }
   .contentMain {
     margin: 1rem 2rem;
@@ -193,7 +198,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .inputField {
     height: 6vmin;
     width: 8vmin;
-    /* font-size: 2vh; */
   }
   .contentMain {
     margin: 1rem 2rem;
@@ -208,4 +212,4 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 1rem 2rem;
     width: auto;
   }
-}
+} */

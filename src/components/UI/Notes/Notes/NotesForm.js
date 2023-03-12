@@ -87,7 +87,9 @@ const NotesForm = (props) => {
             title={isDisabled ? "Fields must not be empty" : null}
             onClick={submitHandler}
           >
-            Submit
+            <span class="material-icons md-light" title="Save">
+              save
+            </span>
           </button>
         </div>
       </section>

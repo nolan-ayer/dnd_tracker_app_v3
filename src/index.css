@@ -1,44 +1,103 @@
+html,
 body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(80, 80, 80);
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.75);
-  font-family: Roboto;
-  color: white;
-  padding: 0;
-  margin: 0;
   font-size: 2vmin;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+article {
+  padding-bottom: 1rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+  margin: 0 0 0 1vmin;
+  outline: none;
+  padding: 0.5vmin;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 150ms ease-in;
+}
+
+button:disabled:hover {
+  background-color: transparent;
 }
 
 h3 {
+  font-size: 3.5vmin;
   margin: 0;
   padding: 0;
-  font-size: 3.5vmin;
 }
 
 h5 {
+  font-size: 3vmin;
   padding: 1rem 0 1rem 0;
   margin: 0;
+}
+
+.material-icons.md-light {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: default;
+  height: 100%;
+  margin: 0.25vmin;
+  padding: 0.25vmin;
+  width: 100%;
+}
+.material-icons.md-light:hover {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.material-icons.md-light.md-inactive {
+  border: 1px solid rgb(32, 32, 32);
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: default;
+  height: 100%;
+  margin: 0.25vmin;
+  padding: 0.25vmin;
+  width: 100%;
+}
+.material-icons.md-light.edit {
+  color: rgba(255, 255, 255, 0.3);
+}
+.material-icons.md-light.delete {
+  color: rgba(255, 255, 255, 0.3);
+}
+.material-icons.md-light.edit:hover {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition: all 150ms ease-in;
+}
+.material-icons.md-light.delete:hover {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  color: rgba(255, 95, 95, 1);
+  cursor: pointer;
+  transition: all 150ms ease-in;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-article {
-  padding-bottom: 1rem;
 }
 
 ::placeholder,
@@ -53,14 +112,14 @@ article {
   background-color: rgb(16, 16, 16);
 }
 ::-webkit-scrollbar-thumb {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 15px;
-  outline: 1px solid black;
   background: rgba(16, 16, 16);
+  border-radius: 15px;
+  height: 0.5rem;
+  outline: 1px solid black;
+  width: 0.5rem;
 }
 
-@media (max-width: 1280px) and (orientation: landscape) {
+/* @media (max-width: 1280px) and (orientation: landscape) {
   button {
     font-size: 1.5vh;
   }
@@ -85,4 +144,4 @@ article {
   body {
     font-size: 2vmin;
   }
-}
+} */
