@@ -19,7 +19,7 @@ const HeaderMain = () => {
           }
         >
           <section className={styles.headerTitle}>
-            <span class="material-icons md-light">home</span>
+            <span class="material-icons md-light logout">home</span>
           </section>
         </Link>
         <HeaderNav />

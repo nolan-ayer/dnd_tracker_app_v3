@@ -38,14 +38,13 @@ const Note = (props) => {
         <section>{props.title}</section>
         <nav>
           <button
-            className="submitButton"
+            // className="submitButton"
+            class="material-icons md-light delete"
             onClick={() => {
               setShowRemoveModal(true);
             }}
           >
-            <span class="material-icons md-light" title="Delete">
-              delete
-            </span>
+            delete
           </button>
         </nav>
       </h5>

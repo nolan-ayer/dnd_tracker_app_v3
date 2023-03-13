@@ -49,50 +49,45 @@ h5 {
   margin: 0;
 }
 
+/* icons start */
 .material-icons.md-light {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   color: rgba(255, 255, 255, 0.3);
   cursor: default;
-  height: 100%;
   margin: 0.25vmin;
   padding: 0.25vmin;
-  width: 100%;
-}
-.material-icons.md-light:hover {
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
 }
 .material-icons.md-light.md-inactive {
   border: 1px solid rgb(32, 32, 32);
   border-radius: 15px;
   color: rgba(255, 255, 255, 0.3);
   cursor: default;
-  height: 100%;
   margin: 0.25vmin;
   padding: 0.25vmin;
-  width: 100%;
 }
-.material-icons.md-light.edit {
-  color: rgba(255, 255, 255, 0.3);
-}
-.material-icons.md-light.delete {
-  color: rgba(255, 255, 255, 0.3);
-}
-.material-icons.md-light.edit:hover {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  color: rgba(255, 255, 255, 1);
+.material-icons.md-light:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: all 150ms ease-in;
 }
 .material-icons.md-light.delete:hover {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
   color: rgba(255, 95, 95, 1);
-  cursor: pointer;
-  transition: all 150ms ease-in;
 }
+.material-icons.md-light.edit:hover {
+  color: rgba(64, 100, 255, 1);
+}
+.material-icons.md-light.logout:hover {
+  color: rgba(255, 144, 38, 1);
+}
+.material-icons.md-light.undo:hover {
+  color: rgba(255, 200, 0, 1);
+}
+.material-icons.md-light.save:hover {
+  color: rgba(0, 202, 125, 1);
+}
+/* icons end */
 
 ul {
   list-style: none;

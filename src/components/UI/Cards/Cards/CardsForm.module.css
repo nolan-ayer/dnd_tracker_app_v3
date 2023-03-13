@@ -15,6 +15,7 @@
   flex-direction: column;
   height: auto;
   justify-content: space-between;
+  padding: 2.5vmin;
   position: relative;
   width: auto;
 }

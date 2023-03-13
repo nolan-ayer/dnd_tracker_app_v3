@@ -60,19 +60,19 @@ const NotesForm = (props) => {
     <form className={styles.notesForm}>
       <section className={styles.notesTitleContainer}>
         <textarea
-          type="text"
-          placeholder="Title"
           className={styles.notesTitleInput}
-          value={noteTitle}
           onChange={noteTitleChangeHandler}
+          placeholder="Title"
+          type="text"
+          value={noteTitle}
         />
       </section>
       <section className={styles.noteBody}>
         <textarea
-          placeholder="Note body"
           className={styles.notesBodyInput}
-          value={noteBody}
           onChange={noteBodyChangeHandler}
+          placeholder="Note body"
+          value={noteBody}
         />
         <div
           className={
@@ -81,15 +81,14 @@ const NotesForm = (props) => {
         >
           {isLoading && <p className="response__isLoading">updating list...</p>}
           <button
-            type="submit"
-            className={isDisabled ? "submitButton__disabled" : "submitButton"}
+            // className={isDisabled ? "submitButton__disabled" : "submitButton"}
+            class="material-icons md-light save"
             disabled={isDisabled}
-            title={isDisabled ? "Fields must not be empty" : null}
             onClick={submitHandler}
+            title={isDisabled ? "Fields must not be empty" : null}
+            type="submit"
           >
-            <span class="material-icons md-light" title="Save">
-              save
-            </span>
+            save
           </button>
         </div>
       </section>

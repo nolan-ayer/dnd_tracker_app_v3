@@ -165,7 +165,7 @@ const CardsForm = (props) => {
             disabled={isDisabled}
             title={isDisabled ? "Enter something to clear it" : null}
           >
-            <span class="material-icons md-light">undo</span>
+            <span class="material-icons md-light undo">undo</span>
           </button>
         </div>
 
@@ -262,7 +262,7 @@ const CardsForm = (props) => {
                 : null
             }
           >
-            <span class="material-icons md-light">save</span>
+            <span class="material-icons md-light save">save</span>
           </button>
         </nav>
       </form>

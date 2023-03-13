@@ -128,7 +128,8 @@ const ChangePasswordForm = () => {
               <p className="response__invalid">Passwords must match</p>
             )}
             <button
-              className={isDisabled ? "submitButton__disabled" : "submitButton"}
+              // className={isDisabled ? "submitButton__disabled" : "submitButton"}
+              class="material-icons md-light save"
               type="submit"
               onClick={passwordCheckHandler}
               disabled={isDisabled}
@@ -138,7 +139,7 @@ const ChangePasswordForm = () => {
                   : null
               }
             >
-              Submit
+              save
             </button>
           </nav>
         </div>
