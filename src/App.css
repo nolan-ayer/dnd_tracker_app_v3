@@ -34,7 +34,7 @@
   margin: 1rem 0 2vmin 0;
   padding: 4vmin;
   text-align: center;
-  width: calc(60% + 6vmin);
+  width: 100%;
 }
 
 .deleteButton {
@@ -105,7 +105,7 @@
   margin: 0;
   padding: 0.5rem 0;
   text-align: center;
-  width: 100%;
+  width: 80%;
 }
 
 .response__invalid {
