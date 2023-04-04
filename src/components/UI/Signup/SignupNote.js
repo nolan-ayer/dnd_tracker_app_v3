@@ -1,5 +1,3 @@
-import styles from "./SignupNote.module.css";
-
 const SignupNote = () => {
   return (
     <div className="contentMain">

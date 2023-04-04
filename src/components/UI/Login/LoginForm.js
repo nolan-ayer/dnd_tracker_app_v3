@@ -128,7 +128,7 @@ const LoginForm = () => {
                     : null
                 }
               >
-                Login
+                <span className={styles.text}>Login</span>
               </button>
             )}
             {isLoading && <p>Processing request...</p>}

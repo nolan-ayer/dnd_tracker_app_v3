@@ -35,6 +35,7 @@ article {
 button {
   background-color: transparent;
   border: none;
+  color: white;
   height: fit-content;
   margin: 0 0 0 1vmin;
   outline: none;
@@ -45,6 +46,10 @@ button {
 button:hover {
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 150ms ease-in;
+}
+
+button:disabled {
+  color: gray;
 }
 
 button:disabled:hover {

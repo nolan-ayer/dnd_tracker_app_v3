@@ -11,7 +11,7 @@
   justify-content: center;
   padding: 2vmin 0;
   text-align: center;
-  width: calc(40% + 8vmin);
+  width: calc(80% + 8vmin);
 }
 
 .contentMain {
@@ -34,7 +34,7 @@
   margin: 1rem 0 2vmin 0;
   padding: 4vmin;
   text-align: center;
-  width: calc(40% + 8vmin);
+  width: calc(80% + 8vmin);
 }
 
 .deleteButton {
@@ -105,7 +105,7 @@
   margin: 0;
   padding: 0.5rem 0;
   text-align: center;
-  width: calc(40% + 8vmin);
+  width: calc(80% + 8vmin);
 }
 
 .response__invalid {
@@ -119,14 +119,22 @@
 }
 
 .submitButton {
-  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5vmin;
+  box-sizing: border-box;
+  color: whitesmoke;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   height: fit-content;
   justify-content: center;
-  padding: 0;
+  padding: 2vmin;
   width: max-content;
+}
+
+.submitButton:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
 .submitButton__disabled {

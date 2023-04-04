@@ -1,3 +1,8 @@
+.signupCardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .signupContainer {
   display: flex;
   flex-direction: column;
@@ -31,9 +36,9 @@
   box-shadow: 0 0 4px paleturquoise;
 }
 
-.signupCardContainer {
-  display: flex;
-  justify-content: space-between;
+.text {
+  color: inherit;
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
 }
 
 /* @media (max-width: 900px) and (orientation: landscape) {

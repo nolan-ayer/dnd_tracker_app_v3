@@ -1,4 +1,4 @@
-import { Route, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const LoginNav = () => {
@@ -14,7 +14,7 @@ const LoginNav = () => {
             : styles.navButton
         }
       >
-        Signup
+        <span className={styles.text}>Signup</span>
       </Link>
       <Link
         to="/login"
@@ -24,7 +24,7 @@ const LoginNav = () => {
             : styles.navButton
         }
       >
-        Login
+        <span className={styles.text}>Login</span>
       </Link>
     </nav>
   );

@@ -18,43 +18,6 @@ function App() {
   return (
     <Layout>
       <Switch>
-        {/* {authCtx.isLoggedIn ? (
-          <Route path="/cards">
-            <Cards />
-          </Route>
-        ) : (
-          history.replace("/")
-        )}
-        {authCtx.isLoggedIn ? (
-          <Route path="/notes">
-            <Notes />
-          </Route>
-        ) : (
-          history.replace("/")
-        )}
-        <Route path="/profile">
-          {authCtx.isLoggedIn ? <ChangePasswordForm /> : history.replace("/")}
-        </Route>
-        {!authCtx.isLoggedIn ? (
-          <Route path="/login">
-            <LoginMain />
-          </Route>
-        ) : (
-          history.replace("/")
-        )}
-        {!authCtx.isLoggedIn ? (
-          <Route path="/signup">
-            <SignupMain />
-          </Route>
-        ) : (
-          history.replace("/")
-        )}
-        <Route path="/">
-          <Welcome />
-        </Route>
-        <Route path="*">
-          <Redirect to="/" />
-        </Route> */}
         {authCtx.isLoggedIn && (
           <Route path="/cards">
             <Cards />

@@ -83,7 +83,7 @@ const SignupForm = () => {
   };
 
   return (
-    <section className="contentMain">
+    <div className="contentMain">
       <form className="contentMainPlacementHelper">
         <div className="mainContentsStandalone">
           <input
@@ -124,14 +124,14 @@ const SignupForm = () => {
                     : null
                 }
               >
-                Create Account
+                <span className={styles.text}>Create Account</span>
               </button>
             )}
             {isLoading && <p>Processing request...</p>}
           </nav>
         </div>
       </form>
-    </section>
+    </div>
   );
 };
 
