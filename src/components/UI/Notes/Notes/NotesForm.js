@@ -58,7 +58,7 @@ const NotesForm = (props) => {
 
   return (
     <form className={styles.notesForm}>
-      <section className={styles.notesTitleContainer}>
+      <div>
         <textarea
           className={styles.notesTitleInput}
           onChange={noteTitleChangeHandler}
@@ -66,15 +66,13 @@ const NotesForm = (props) => {
           type="text"
           value={noteTitle}
         />
-      </section>
-      <section className={styles.noteBody}>
         <textarea
           className={styles.notesBodyInput}
           onChange={noteBodyChangeHandler}
           placeholder="Note body"
           value={noteBody}
         />
-        <div
+        <nav
           className={
             !isLoading ? "submitButtonContainer" : "submitButtonContainer2"
           }
@@ -90,8 +88,8 @@ const NotesForm = (props) => {
           >
             save
           </button>
-        </div>
-      </section>
+        </nav>
+      </div>
     </form>
   );
 };

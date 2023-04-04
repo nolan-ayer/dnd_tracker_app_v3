@@ -22,17 +22,15 @@ const Note = (props) => {
   return (
     <li className={styles.note} key={props.id}>
       {showRemoveModal ? (
-        <div className={styles.modalPlacementHelper}>
-          <RemoveElementModal
-            cancel={() => {
-              setShowRemoveModal(false);
-            }}
-            removeItem={() => {
-              deleteHandler();
-              setShowRemoveModal(false);
-            }}
-          />
-        </div>
+        <RemoveElementModal
+          cancel={() => {
+            setShowRemoveModal(false);
+          }}
+          removeItem={() => {
+            deleteHandler();
+            setShowRemoveModal(false);
+          }}
+        />
       ) : null}
       <h5 className={styles.noteHeader}>
         <section>{props.title}</section>

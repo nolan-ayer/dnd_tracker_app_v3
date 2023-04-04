@@ -1,12 +1,17 @@
-a:visited {
-  color: white;
-}
-
 .align-left {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
+}
+
+.centered {
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+  padding: 2vmin 0;
+  text-align: center;
+  width: calc(40% + 8vmin);
 }
 
 .contentMain {
@@ -32,15 +37,6 @@ a:visited {
   width: calc(40% + 8vmin);
 }
 
-.centered {
-  align-items: center;
-  display: inline-block;
-  justify-content: center;
-  padding: 2vmin 0;
-  text-align: center;
-  width: calc(40% + 8vmin);
-}
-
 .deleteButton {
   cursor: pointer;
 }
@@ -61,13 +57,13 @@ a:visited {
   text-decoration: none;
 }
 
-.embeddedLink:visited {
-  color: teal;
-}
-
 .embeddedLink:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.embeddedLink:visited {
+  color: teal;
 }
 
 .inputField {
@@ -78,11 +74,6 @@ a:visited {
   text-align: center;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  opacity: 1;
-}
-
 .inputField:focus {
   box-shadow: 0 0 4px paleturquoise;
   outline: 1px solid lightskyblue;
@@ -90,6 +81,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .inputField:hover {
   box-shadow: 0 0 5px 1px lightblue;
+}
+
+.mainContent {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 .mainContents {
@@ -134,6 +134,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .submitButtonContainer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -143,6 +144,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .submitButtonContainer2 {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   margin: 1rem 0 1rem 0;
@@ -150,66 +152,17 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
 }
 
-/* @media (max-width: 1279px) and (orientation: landscape) {
-  .inputField {
-    width: 7vw;
-  }
-}
-
-@media (min-width: 1280px) and (orientation: landscape) {
-  .inputField {
-    min-width: 6vw;
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) {
-  .inputField {
-    min-width: 5vw;
-  }
-}
-
-@media (min-width: 1600px) and (orientation: landscape) {
-  .inputField {
-    min-width: 4vw;
-  }
-}
-
-@media (max-width: 800px) and (orientation: portrait) {
-  .inputField {
-    height: 8vh;
-    width: 22vw;
+@media (orientation: portrait) {
+  .centered {
+    width: calc(80% + 8vmin);
   }
   .contentMain {
-    margin: 1rem 2rem;
+    width: calc(80% + 8vmin);
   }
   .contentMainPlacementHelper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 0;
-    margin: 1rem 2rem;
-    width: auto;
+    width: calc(80% + 8vmin);
+  }
+  .mainContentsStandalone {
+    width: 100%;
   }
 }
-
-@media (min-width: 801px) and (orientation: portrait) {
-  .inputField {
-    height: 6vmin;
-    width: 8vmin;
-  }
-  .contentMain {
-    margin: 1rem 2rem;
-  }
-  .contentMainPlacementHelper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 0;
-    margin: 1rem 2rem;
-    width: auto;
-  }
-} */

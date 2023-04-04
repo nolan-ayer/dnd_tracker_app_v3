@@ -1,32 +1,41 @@
-.note {
-  position: relative;
-  padding: 0;
-  margin: 0;
+.modalPlacementHelper {
   border-radius: 15px;
-  background-color: rgb(60, 60, 60);
-  min-height: 24vh;
-  overflow-y: auto;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
 }
 
-.modalPlacementHelper {
-  position: absolute;
-  z-index: 1000;
-  height: 100%;
-  width: 100%;
+.note {
+  aspect-ratio: 5/3;
+  background-color: rgb(60, 60, 60);
   border-radius: 15px;
+  box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  padding: 2.5vmin;
+  position: relative;
+  overflow-y: auto;
 }
 
 .noteHeader {
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* font-size: 2vw; */
   justify-content: space-between;
-  align-items: center;
-  padding: 0 0 1rem 0;
-  margin: 1rem 1rem 0 1rem;
-  border-bottom: 1px solid white;
-  font-size: 2vw;
+  padding: 0 0 2.5vmin 0;
+}
+
+.noteMain {
+  /* font-size: 0.75vw; */
+  white-space: pre-line;
+  width: fit-content;
+  padding: 0;
 }
 
 .noteHeader > section {
@@ -34,94 +43,87 @@
   padding: 0;
 }
 
-.noteMain {
-  width: fit-content;
-  padding: 1rem;
-  white-space: pre-line;
-  font-size: 0.75vw;
-}
-
 @media (max-width: 900px) and (orientation: landscape) {
   .noteHeader > section {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
   }
   .noteMain {
-    font-size: 1.75vw;
+    /* font-size: 1.75vw; */
   }
 }
 
 @media (min-width: 901px) and (orientation: landscape) {
   .noteHeader {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
   }
   .noteMain {
-    font-size: 2vw;
+    /* font-size: 2vw; */
   }
 }
 
 @media (min-width: 1281px) and (orientation: landscape) {
   .noteHeader {
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
   }
   .noteMain {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
 }
 
 @media (min-width: 1367px) and (orientation: landscape) {
   .noteHeader {
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
   }
   .noteMain {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
 }
 
 @media (min-width: 1601px) and (orientation: landscape) {
   .noteHeader {
-    font-size: 1vw;
+    /* font-size: 1vw; */
   }
   .noteMain {
-    font-size: 0.75vw;
+    /* font-size: 0.75vw; */
   }
 }
 
 @media (min-width: 1921px) and (orientation: landscape) {
   .noteHeader {
-    font-size: 1vw;
+    /* font-size: 1vw; */
   }
   .noteMain {
-    font-size: 0.75vw;
+    /* font-size: 0.75vw; */
   }
 }
 
 @media (max-width: 800px) and (orientation: portrait) {
   .noteHeader {
-    font-size: 3vh;
+    /* font-size: 3vh; */
   }
   .noteHeader > section {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
   }
   .noteMain {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
   }
   button {
-    font-size: 2vh;
+    /* font-size: 2vh; */
   }
 }
 
 @media (min-width: 801px) and (orientation: portrait) {
   .noteHeader {
-    font-size: 3vh;
+    /* font-size: 3vh; */
   }
   .noteHeader > section {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
   }
   .noteMain {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
     height: 12vh;
   }
   button {
-    font-size: 2vh;
+    /* font-size: 2vh; */
   }
 }

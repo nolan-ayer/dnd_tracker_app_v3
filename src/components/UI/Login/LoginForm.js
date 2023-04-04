@@ -87,7 +87,7 @@ const LoginForm = () => {
   };
 
   return (
-    <main className="contentMain">
+    <div className="contentMain">
       <form className="contentMainPlacementHelper">
         <div className="mainContentsStandalone">
           <input
@@ -135,7 +135,7 @@ const LoginForm = () => {
           </nav>
         </div>
       </form>
-    </main>
+    </div>
   );
 };
 

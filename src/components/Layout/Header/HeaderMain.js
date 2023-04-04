@@ -11,16 +11,14 @@ const HeaderMain = () => {
     <>
       <header className={styles.headerMain}>
         <Link
-          to="/"
           className={
             window.location.pathname === "/"
               ? styles.titleButton__selected
               : styles.titleButton
           }
+          to="/"
         >
-          <section className={styles.headerTitle}>
-            <span class="material-icons md-light logout">home</span>
-          </section>
+          <span class="material-icons md-light">home</span>
         </Link>
         <HeaderNav />
       </header>

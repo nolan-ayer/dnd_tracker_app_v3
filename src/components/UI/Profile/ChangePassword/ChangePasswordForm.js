@@ -85,7 +85,7 @@ const ChangePasswordForm = () => {
   }, [enteredNewPassword]);
 
   return (
-    <main className="contentMain">
+    <>
       <section className="centered">
         Change your password here by entering it here! Be sure not to forget it
         though, as password resets are not a functional feature as of yet!
@@ -144,7 +144,7 @@ const ChangePasswordForm = () => {
           </nav>
         </div>
       </form>
-    </main>
+    </>
   );
 };
 

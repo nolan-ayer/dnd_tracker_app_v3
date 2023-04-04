@@ -6,7 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   width: 100vw;
 }
 
@@ -19,46 +19,17 @@
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  padding: 0 3vmin;
-}
-
-.titleButton {
-  margin: 0 0.2rem;
-  text-decoration: none;
-}
-
-.titleButton:hover {
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.titleButton__selected {
-  align-items: center;
-  background: transparent;
-  border: none;
-  border-radius: 15px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  margin: 0 0.2rem;
-  text-decoration: none;
-}
-
-.titleButton__selected:hover {
-  cursor: default;
 }
 
 .navButton {
   align-items: center;
   background: transparent;
   border: none;
-  border-radius: 15px;
+  border-radius: 5vw;
   color: white;
   display: flex;
-  height: 3vmin;
   justify-content: center;
-  margin: 0 0.5vmin;
-  padding: 2vmin;
+  margin: 1vmin;
   text-decoration: none;
   width: fit-content;
 }
@@ -71,14 +42,12 @@
 .navButton__selected {
   align-items: center;
   background: teal;
-  color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 5vw;
+  color: white;
   display: flex;
-  height: 3vmin;
   justify-content: center;
-  margin: 0 0.5vmin;
-  padding: 2vmin;
+  margin: 1vmin;
   text-decoration: none;
   width: fit-content;
 }
@@ -90,86 +59,41 @@
 
 .navButton:hover,
 .navButton__selected:hover {
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
   transition: all 150ms ease-in;
 }
 
-/* @media (min-width: 1280px) and (orientation: landscape) {
-  .navButton {
-    font-size: medium;
-  }
-} */
-
-/* @media (min-width: 1281px) and (orientation: landscape) {
-  .navButton {
-    font-size: medium;
-  }
-} */
-
-/* @media (min-width: 1367px) and (orientation: landscape) {
-  .navButton {
-    font-size: large;
-  }
-} */
-
-/* @media (min-width: 1601px) and (orientation: landscape) {
-  .navButton {
-    font-size: x-large;
-  }
-} */
-
-/* @media (min-width: 1921px) and (orientation: landscape) {
-  .navButton {
-    font-size: xx-large;
-  }
-} */
-
-@media (max-width: 799px) and (orientation: portrait) {
-  .headerMain {
-    border: none;
-    padding: 0;
-  }
-  .navContainer {
-    height: 8vh;
-    padding: 0;
-  }
-  .navButton {
-    border: none;
-    border-radius: 0;
-    height: 100%;
-    padding: 0 1rem 0 1rem;
-    width: fit-content;
-  }
-  .navButton__selected {
-    border: none;
-    border-radius: 0;
-    height: 100%;
-    padding: 0 1rem 0 1rem;
-    width: fit-content;
-  }
+.titleButton {
+  margin: 0 0.2rem;
+  text-decoration: none;
 }
 
-@media (min-width: 800px) and (orientation: portrait) {
+.titleButton:hover {
+  border-radius: 5vw;
+  cursor: pointer;
+}
+
+.titleButton__selected {
+  align-items: center;
+  background: teal;
+  border: none;
+  border-radius: 5vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 1vmin;
+  text-decoration: none;
+}
+
+.titleButton__selected:hover {
+  background-color: rgba(0, 128, 128, 0.8);
+  cursor: default;
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
   .headerMain {
     border: none;
-    padding: 0;
   }
   .navContainer {
-    height: 8vh;
-    padding: 0.2rem 0;
-  }
-  .navButton {
-    border: none;
-    border-radius: 0;
-    height: 100%;
-    padding: 0 1rem 0 1rem;
-    width: fit-content;
-  }
-  .navButton__selected {
-    border: none;
-    border-radius: 0;
-    height: 100%;
-    padding: 0 1rem 0 1rem;
-    width: fit-content;
+    height: 4vh;
   }
 }

@@ -34,7 +34,6 @@ const LoggedInNav = () => {
         >
           <span class="material-icons md-light">note_add</span>
         </Link>
-
         <Link
           className={
             window.location.pathname === "/notes"
@@ -46,14 +45,13 @@ const LoggedInNav = () => {
         >
           <span class="material-icons md-light">description</span>
         </Link>
-
         <Link
           className={styles.navButton}
           onClick={logout}
           title="Logout"
           to="/"
         >
-          <span class="material-icons md-light">logout</span>
+          <span class="material-icons md-light delete">logout</span>
         </Link>
       </nav>
     </>

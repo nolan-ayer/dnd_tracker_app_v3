@@ -56,7 +56,8 @@ const CardsForm = (props) => {
     playerWitRef,
   ]);
 
-  const resetHandler = () => {
+  const resetHandler = (event) => {
+    event.preventDefault();
     setPlayerName("");
     playerLvlRef.current.value = null;
     playerStrRef.current.value = null;
@@ -139,134 +140,144 @@ const CardsForm = (props) => {
   };
 
   return (
-    <div className={styles.cardsFormContainer}>
-      <form className={styles.cardsForm}>
-        {showModal ? (
-          <div className={styles.modalPlacementHelper}>
-            <AddCardErrorModal
-              show={showModal}
-              hide={() => setShowModal(false)}
-            />
-          </div>
-        ) : null}
-        <div className={styles.cardNameContainer}>
-          <input
-            className={styles.cardNameInput}
-            type="text"
-            value={playerName}
-            onChange={nameChangeHandler}
-            title="Name"
-            placeholder="Name"
+    // <div className={styles.cardsFormContainer}>
+    <form className={styles.cardsForm}>
+      {showModal ? (
+        <div className={styles.modalPlacementHelper}>
+          <AddCardErrorModal
+            show={showModal}
+            hide={() => setShowModal(false)}
           />
-          <button
-            onClick={resetHandler}
-            className={isDisabled ? "submitButton__disabled" : "submitButton"}
-            type="submit"
-            disabled={isDisabled}
-            title={isDisabled ? "Enter something to clear it" : null}
-          >
-            <span class="material-icons md-light undo">undo</span>
-          </button>
         </div>
-
+      ) : null}
+      <div className={styles.cardNameContainer}>
+        <input
+          className={styles.cardNameInput}
+          type="text"
+          value={playerName}
+          onChange={nameChangeHandler}
+          title="Name"
+          placeholder="Name"
+        />
+        <button
+          onClick={resetHandler}
+          className={
+            isDisabled
+              ? "material-icons md-light md-inactive"
+              : "material-icons md-light undo"
+          }
+          // class="material-icons md-light undo"
+          type="submit"
+          disabled={isDisabled}
+          title={isDisabled ? "Enter something to clear it" : null}
+        >
+          undo
+        </button>
+      </div>
+      <div>
         <ul className={styles.attributes}>
           <li />
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="LVL"
               ref={playerLvlRef}
               title="Level"
-              placeholder="LVL"
+              type="number"
             />
           </li>
           <li />
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="STR"
               ref={playerStrRef}
               title="Strength"
-              placeholder="STR"
+              type="number"
             />
           </li>
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="FIN"
               ref={playerFinRef}
               title="Finesse"
-              placeholder="FIN"
+              type="number"
             />
           </li>
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="INT"
               ref={playerIntRef}
               title="Intelligence "
-              placeholder="INT"
+              type="number"
             />
           </li>
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="CON"
               ref={playerConRef}
               title="Constitution"
-              placeholder="CON"
+              type="number"
             />
           </li>
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="MEM"
               ref={playerMemRef}
               title="Memory"
-              placeholder="MEM"
+              type="number"
             />
           </li>
           <li>
             <input
               className="inputField"
-              type="number"
-              min="1"
               max="20"
+              min="1"
+              placeholder="WIT"
               ref={playerWitRef}
               title="Wits"
-              placeholder="WIT"
+              type="number"
             />
           </li>
         </ul>
-        <nav className="submitButtonContainer">
-          <button
-            className={isDisabled ? "submitButton__disabled" : "submitButton"}
-            type="submit"
-            onClick={submitHandler}
-            disabled={isDisabled}
-            title={
-              isDisabled
-                ? "Please fill out all entries before submitting"
-                : null
-            }
-          >
-            <span class="material-icons md-light save">save</span>
-          </button>
-        </nav>
-      </form>
-    </div>
+      </div>
+      <nav className="submitButtonContainer">
+        <button
+          // className={isDisabled ? "submitButton__disabled" : "submitButton"}
+          className={
+            isDisabled
+              ? "material-icons md-light md-inactive"
+              : "material-icons md-light save"
+          }
+          disabled={isDisabled}
+          onClick={submitHandler}
+          title={
+            isDisabled ? "Please fill out all entries before submitting" : null
+          }
+          type="submit"
+        >
+          save
+          {/* <span class="material-icons md-light save">save</span> */}
+        </button>
+      </nav>
+    </form>
+    //</div>
   );
 };
 

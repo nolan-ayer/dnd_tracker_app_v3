@@ -1,48 +1,48 @@
 .cardContainer {
+  background-color: transparent;
+  column-gap: 2.5vmin;
   display: grid;
-  grid-template-columns: 5fr 5fr 5fr 5fr;
+  grid-template-columns: repeat(2, 5fr);
   grid-template-rows: 7fr;
   padding: 1rem;
-  column-gap: 2.5vmin;
   row-gap: 2.5vmin;
-  width: auto;
-  background-color: transparent;
-}
-
-/* @media (max-width: 899px) and (orientation: landscape) {
-  .cardContainer {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  width: 100vw;
 }
 
 @media (min-width: 900px) and (orientation: landscape) {
   .cardContainer {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 5fr);
+    grid-template-rows: 7fr;
   }
 }
 
 @media (min-width: 1280px) and (orientation: landscape) {
   .cardContainer {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 5fr);
+    grid-template-rows: 7fr;
   }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .cardContainer {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 5fr);
+    grid-template-rows: 7fr;
   }
 }
 
 @media (min-width: 1600px) and (orientation: landscape) {
   .cardContainer {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 5fr);
+    grid-template-rows: 7fr;
   }
-} */
+}
 
 @media (orientation: portrait) {
   .cardContainer {
     justify-items: center;
     column-gap: auto;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 7fr;
     row-gap: auto;
   }
 }

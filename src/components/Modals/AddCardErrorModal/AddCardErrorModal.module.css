@@ -1,32 +1,21 @@
-.modalHelper {
-  display: flex;
-}
-
 .modalBackdrop {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 0;
-  background-color: rgb(60, 60, 60);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .modalBackdrop:hover {
   /* cursor: pointer; */
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modalMain {
-  text-align: center;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: salmon;
-  border: 1px white solid;
-  border-radius: 15px;
-  font-size: 1vw;
 }
 
 .modalBackdropWithHover {
@@ -40,9 +29,24 @@
   backdrop-filter: blur(2px);
   border-radius: 15px;
 }
+
 .modalBackdropWithHover:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modalHelper {
+  display: flex;
+}
+
+.modalMain {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: salmon;
+  border: 1px white solid;
+  border-radius: 15px;
+  /* font-size: 1vw; */
 }
 
 .removeElementNav {
@@ -54,6 +58,6 @@
 
 @media (orientation: portrait) {
   .modalMain {
-    font-size: 2vh;
+    /* font-size: 2vh; */
   }
 }

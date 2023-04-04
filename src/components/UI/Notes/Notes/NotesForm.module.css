@@ -1,51 +1,43 @@
 .notesForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  border-radius: 15px;
+  aspect-ratio: 5/3;
   background-color: rgb(60, 60, 60);
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.35);
-  min-height: 24vh;
-}
-
-.notesTitleContainer {
-  height: fit-content;
-  width: calc(100% - 2rem);
-  margin: 1rem 1rem 0.25rem 1rem;
-  padding: 0;
-}
-
-.notesTitleInput {
-  resize: none;
-  width: calc(100% - 1rem - 2px);
-  min-height: 2vw;
-  padding: 0.5rem;
-  margin: 0;
   border-radius: 15px;
-  font-size: 1.25vw;
-}
-
-.noteBody {
+  box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: calc(100% - 2rem);
+  height: auto;
+  justify-content: flex-start;
+  padding: 2.5vmin;
+  position: relative;
+  width: auto;
+}
+
+.notesForm > div {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  margin: 0 1rem 0 1rem;
-  padding: 0;
 }
 
 .notesBodyInput {
-  resize: none;
-  height: 100%;
-  width: calc(100% - 2px - 1rem);
-  padding: 0.5rem;
-  margin: 0;
   border-radius: 15px;
-  font-size: 1.25vw;
+  box-sizing: border-box;
+  /* font-size: 1.25vw; */
+  height: 100%;
+  margin: 2.5vmin 0 0 0;
+  padding: 0.5rem;
+  resize: none;
+  width: 100%;
+}
+
+.notesTitleInput {
+  border-radius: 15px;
+  box-sizing: border-box;
+  /* font-size: 1.25vw; */
+  padding: 0.5rem;
+  resize: none;
+  width: 100%;
 }
 
 .notesTitleInput:focus,
@@ -67,61 +59,61 @@
 
 @media (max-width: 900px) and (orientation: landscape) {
   .notesTitleInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
   .notesBodyInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
 }
 
 @media (min-width: 901px) and (orientation: landscape) {
   .notesTitleInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
   .notesBodyInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
 }
 
 @media (min-width: 1281px) and (orientation: landscape) {
   .notesTitleInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
   }
   .notesBodyInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
     height: 100%;
   }
 }
 
 @media (min-width: 1367px) and (orientation: landscape) {
   .notesTitleInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
     height: 3vh;
   }
   .notesBodyInput {
-    font-size: 1.25vw;
+    /* font-size: 1.25vw; */
     height: 100%;
   }
 }
 
 @media (min-width: 1601px) and (orientation: landscape) {
   .notesTitleInput {
-    font-size: 0.75vw;
+    /* font-size: 0.75vw; */
     height: 3vh;
   }
   .notesBodyInput {
-    font-size: 0.75vw;
+    /* font-size: 0.75vw; */
     height: 100%;
   }
 }
 
 @media (min-width: 1921px) and (orientation: landscape) {
   .notesTitleInput {
-    font-size: 0.75vw;
+    /* font-size: 0.75vw; */
     height: 3vh;
   }
   .notesBodyInput {
-    font-size: 0.75vw;
+    /* font-size: 0.75vw; */
     height: 100%;
   }
 }
@@ -131,11 +123,11 @@
     max-height: fit-content;
   }
   .notesTitleInput {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
     height: 4vh;
   }
   .notesBodyInput {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
     height: 12vh;
   }
 }
@@ -148,11 +140,11 @@
     margin-bottom: 1rem;
   }
   .notesTitleInput {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
     height: 4vh;
   }
   .notesBodyInput {
-    font-size: 2.5vh;
+    /* font-size: 2.5vh; */
     height: 12vh;
   }
 }
