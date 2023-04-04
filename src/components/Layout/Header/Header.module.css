@@ -29,7 +29,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  margin: 1vmin;
+  margin: 1vw;
   text-decoration: none;
   width: fit-content;
 }
@@ -47,7 +47,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  margin: 1vmin;
+  margin: 1vw;
   text-decoration: none;
   width: fit-content;
 }
@@ -64,7 +64,7 @@
 
 .text {
   border-radius: 5vw;
-  padding: 2vmin;
+  padding: 2vw;
 }
 
 .titleButton {

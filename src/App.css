@@ -21,6 +21,7 @@
   justify-content: center;
   margin: 1rem 0 0 0;
   text-align: center;
+  width: 100%;
 }
 
 .contentMainPlacementHelper {
@@ -34,7 +35,7 @@
   margin: 1rem 0 2vmin 0;
   padding: 4vmin;
   text-align: center;
-  width: 100%;
+  width: calc(60% + 6vmin);
 }
 
 .deleteButton {
@@ -139,6 +140,7 @@
 
 .submitButton__disabled {
   cursor: default;
+  padding: 2vmin;
 }
 
 .submitButtonContainer {

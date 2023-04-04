@@ -106,7 +106,7 @@ ul {
 .material-icons.md-light {
   background-color: rgba(0, 0, 0, 0.075);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+  border-radius: 5vw;
   color: rgba(255, 255, 255, 0.3);
   cursor: default;
   margin: 0.25vmin;
@@ -117,7 +117,7 @@ ul {
 }
 .material-icons.md-light.md-inactive {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
+  border-radius: 5vw;
   color: rgba(255, 255, 255, 0.3);
   cursor: default;
   margin: 0.25vmin;
