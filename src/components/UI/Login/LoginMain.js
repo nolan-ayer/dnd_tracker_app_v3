@@ -3,7 +3,7 @@ import LoginNote from "./LoginNote";
 
 const LoginMain = () => {
   return (
-    <div>
+    <div className="contentMain">
       <LoginNote />
       <LoginForm />
     </div>

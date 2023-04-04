@@ -11,7 +11,7 @@
   justify-content: center;
   padding: 2vmin 0;
   text-align: center;
-  width: calc(80% + 8vmin);
+  width: calc(60% + 6vmin);
 }
 
 .contentMain {
@@ -34,7 +34,7 @@
   margin: 1rem 0 2vmin 0;
   padding: 4vmin;
   text-align: center;
-  width: calc(80% + 8vmin);
+  width: calc(60% + 6vmin);
 }
 
 .deleteButton {
@@ -105,7 +105,7 @@
   margin: 0;
   padding: 0.5rem 0;
   text-align: center;
-  width: calc(80% + 8vmin);
+  width: 100%;
 }
 
 .response__invalid {
@@ -169,8 +169,5 @@
   }
   .contentMainPlacementHelper {
     width: calc(80% + 8vmin);
-  }
-  .mainContentsStandalone {
-    width: 100%;
   }
 }

@@ -3,7 +3,7 @@ import SignupNote from "./SignupNote";
 
 const SignupMain = () => {
   return (
-    <div>
+    <div className="contentMain">
       <SignupNote />
       <SignupForm />
     </div>

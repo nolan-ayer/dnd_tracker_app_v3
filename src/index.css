@@ -169,7 +169,10 @@ ul {
   width: 0.5rem;
 }
 
-@media (max-width: 320px) and (orientation: portrait) {
+@media (orientation: portrait) {
+  * {
+    margin: 0;
+  }
   .material-icons.md-light {
     font-size: calc(28px + 6 * ((100vw - 320px) / 680));
   }
