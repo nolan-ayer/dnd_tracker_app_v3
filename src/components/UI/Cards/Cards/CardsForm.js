@@ -70,7 +70,6 @@ const CardsForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("clicked");
     if (
       (playerLvlRef.current.value ||
         playerStrRef.current.value ||
@@ -174,88 +173,71 @@ const CardsForm = (props) => {
           undo
         </button>
       </div>
-      <div>
-        <ul className={styles.attributes}>
-          <li />
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="LVL"
-              ref={playerLvlRef}
-              title="Level"
-              type="number"
-            />
-          </li>
-          <li />
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="STR"
-              ref={playerStrRef}
-              title="Strength"
-              type="number"
-            />
-          </li>
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="FIN"
-              ref={playerFinRef}
-              title="Finesse"
-              type="number"
-            />
-          </li>
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="INT"
-              ref={playerIntRef}
-              title="Intelligence "
-              type="number"
-            />
-          </li>
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="CON"
-              ref={playerConRef}
-              title="Constitution"
-              type="number"
-            />
-          </li>
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="MEM"
-              ref={playerMemRef}
-              title="Memory"
-              type="number"
-            />
-          </li>
-          <li>
-            <input
-              className="inputField"
-              max="20"
-              min="1"
-              placeholder="WIT"
-              ref={playerWitRef}
-              title="Wits"
-              type="number"
-            />
-          </li>
-        </ul>
+      <div className={styles.attributes}>
+        <span />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="LVL"
+          ref={playerLvlRef}
+          title="Level"
+          type="number"
+        />
+        <span />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="STR"
+          ref={playerStrRef}
+          title="Strength"
+          type="number"
+        />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="FIN"
+          ref={playerFinRef}
+          title="Finesse"
+          type="number"
+        />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="INT"
+          ref={playerIntRef}
+          type="number"
+        />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="CON"
+          ref={playerConRef}
+          title="Constitution"
+          type="number"
+        />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="MEM"
+          ref={playerMemRef}
+          title="Memory"
+          type="number"
+        />
+        <input
+          className="inputField"
+          max="20"
+          min="1"
+          placeholder="WIT"
+          ref={playerWitRef}
+          title="Wits"
+          type="number"
+        />
       </div>
       <nav className="submitButtonContainer">
         <button

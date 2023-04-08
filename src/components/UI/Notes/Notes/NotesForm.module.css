@@ -23,7 +23,7 @@
 .notesBodyInput {
   border-radius: 15px;
   box-sizing: border-box;
-  /* font-size: 1.25vw; */
+
   height: 100%;
   margin: 2.5vmin 0 0 0;
   padding: 0.5rem;
@@ -34,7 +34,7 @@
 .notesTitleInput {
   border-radius: 15px;
   box-sizing: border-box;
-  /* font-size: 1.25vw; */
+
   padding: 0.5rem;
   resize: none;
   width: 100%;
@@ -59,61 +59,49 @@
 
 @media (max-width: 900px) and (orientation: landscape) {
   .notesTitleInput {
-    /* font-size: 1.25vw; */
   }
   .notesBodyInput {
-    /* font-size: 1.25vw; */
   }
 }
 
 @media (min-width: 901px) and (orientation: landscape) {
   .notesTitleInput {
-    /* font-size: 1.25vw; */
   }
   .notesBodyInput {
-    /* font-size: 1.25vw; */
   }
 }
 
 @media (min-width: 1281px) and (orientation: landscape) {
   .notesTitleInput {
-    /* font-size: 1.25vw; */
   }
   .notesBodyInput {
-    /* font-size: 1.25vw; */
     height: 100%;
   }
 }
 
 @media (min-width: 1367px) and (orientation: landscape) {
   .notesTitleInput {
-    /* font-size: 1.25vw; */
     height: 3vh;
   }
   .notesBodyInput {
-    /* font-size: 1.25vw; */
     height: 100%;
   }
 }
 
 @media (min-width: 1601px) and (orientation: landscape) {
   .notesTitleInput {
-    /* font-size: 0.75vw; */
     height: 3vh;
   }
   .notesBodyInput {
-    /* font-size: 0.75vw; */
     height: 100%;
   }
 }
 
 @media (min-width: 1921px) and (orientation: landscape) {
   .notesTitleInput {
-    /* font-size: 0.75vw; */
     height: 3vh;
   }
   .notesBodyInput {
-    /* font-size: 0.75vw; */
     height: 100%;
   }
 }
@@ -123,11 +111,9 @@
     max-height: fit-content;
   }
   .notesTitleInput {
-    /* font-size: 2.5vh; */
     height: 4vh;
   }
   .notesBodyInput {
-    /* font-size: 2.5vh; */
     height: 12vh;
   }
 }
@@ -140,11 +126,9 @@
     margin-bottom: 1rem;
   }
   .notesTitleInput {
-    /* font-size: 2.5vh; */
     height: 4vh;
   }
   .notesBodyInput {
-    /* font-size: 2.5vh; */
     height: 12vh;
   }
 }
