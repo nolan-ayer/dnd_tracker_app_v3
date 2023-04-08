@@ -73,10 +73,26 @@
 
 @media (orientation: portrait) {
   .attributes {
-    height: fit-content;
-    width: fit-content;
+    /* height: 40%; */
   }
-  .cardsForm {
-    width: fit-content;
+  .attributes > input {
+    height: 2.5rem;
+    width: 3.25rem;
+  }
+  .cardNameInput {
+    height: 3.5rem;
+  }
+}
+
+@media (max-width: 499px) and (orientation: portrait) {
+  .attributes {
+    /* height: 40%; */
+  }
+  .attributes > input {
+    height: 17.5vmin;
+    width: 17.5vmin;
+  }
+  .cardNameInput {
+    height: 15vmin;
   }
 }
