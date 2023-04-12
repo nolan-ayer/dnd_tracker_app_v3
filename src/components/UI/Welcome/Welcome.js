@@ -28,7 +28,7 @@ const Welcome = () => {
         )}
       </section>
       {authCtx.isLoggedIn && (
-        <div className="contentMainPlacementHelper">
+        <article className="contentMainPlacementHelper">
           <section className="mainContentsStandalone">
             Fixes Coming Soon:
           </section>
@@ -40,14 +40,9 @@ const Welcome = () => {
             Custom hooks should be used for HTTP requests
           </section>
           <section className="mainContentsStandalone">
-            Scaling issue at width ~450px; potential Chrome DevTools responsive
-            dimensions bug; does not happen when window is resized & responsive
-            is disabled
-          </section>
-          <section className="mainContentsStandalone">
             Add inventory to cards
           </section>
-        </div>
+        </article>
       )}
     </div>
   );

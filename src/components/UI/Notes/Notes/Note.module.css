@@ -16,7 +16,7 @@
   flex-direction: column;
   height: auto;
   justify-content: flex-start;
-  padding: 2.5vmin;
+  padding: 1rem;
   position: relative;
   overflow-y: auto;
 }
@@ -28,81 +28,16 @@
   flex-wrap: wrap;
 
   justify-content: space-between;
-  padding: 0 0 2.5vmin 0;
+  padding: 0 0 1rem 0;
 }
 
 .noteMain {
-  white-space: pre-line;
-  width: fit-content;
+  height: 100%;
   padding: 0;
+  white-space: pre-line;
 }
 
 .noteHeader > section {
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 900px) and (orientation: landscape) {
-  .noteHeader > section {
-  }
-  .noteMain {
-  }
-}
-
-@media (min-width: 901px) and (orientation: landscape) {
-  .noteHeader {
-  }
-  .noteMain {
-  }
-}
-
-@media (min-width: 1281px) and (orientation: landscape) {
-  .noteHeader {
-  }
-  .noteMain {
-  }
-}
-
-@media (min-width: 1367px) and (orientation: landscape) {
-  .noteHeader {
-  }
-  .noteMain {
-  }
-}
-
-@media (min-width: 1601px) and (orientation: landscape) {
-  .noteHeader {
-  }
-  .noteMain {
-  }
-}
-
-@media (min-width: 1921px) and (orientation: landscape) {
-  .noteHeader {
-  }
-  .noteMain {
-  }
-}
-
-@media (max-width: 800px) and (orientation: portrait) {
-  .noteHeader {
-  }
-  .noteHeader > section {
-  }
-  .noteMain {
-  }
-  button {
-  }
-}
-
-@media (min-width: 801px) and (orientation: portrait) {
-  .noteHeader {
-  }
-  .noteHeader > section {
-  }
-  .noteMain {
-    height: 12vh;
-  }
-  button {
-  }
 }

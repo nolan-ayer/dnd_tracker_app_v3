@@ -10,7 +10,7 @@
   width: 100vw;
 }
 
-@media (min-width: 900px) and (orientation: landscape) {
+@media (min-width: 800px) and (orientation: landscape) {
   .cardContainer {
     grid-template-columns: repeat(3, 5fr);
     grid-template-rows: 7fr;

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./NotesForm.module.css";
+import borrowedStyles from "../../Signup/SignupForm.module.css";
 
 const NotesForm = (props) => {
   const [isDisabled, setIsDisabled] = useState(true);
@@ -59,15 +60,15 @@ const NotesForm = (props) => {
   return (
     <form className={styles.notesForm}>
       <div>
-        <textarea
-          className={styles.notesTitleInput}
+        <input
+          className={styles.noteTextInput}
           onChange={noteTitleChangeHandler}
           placeholder="Title"
           type="text"
           value={noteTitle}
         />
         <textarea
-          className={styles.notesBodyInput}
+          className={styles.noteTextBodyInput}
           onChange={noteBodyChangeHandler}
           placeholder="Note body"
           value={noteBody}

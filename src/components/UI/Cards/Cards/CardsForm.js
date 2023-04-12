@@ -131,125 +131,131 @@ const CardsForm = (props) => {
 
   return (
     // <div className={styles.cardsFormContainer}>
-    <form className={styles.cardsForm} onSubmit={submitHandler}>
-      {showModal ? (
-        <div className={styles.modalPlacementHelper}>
-          <AddCardErrorModal
-            show={showModal}
-            hide={() => setShowModal(false)}
-          />
+    <>
+      <form className={styles.cardsForm} onSubmit={submitHandler}>
+        {showModal ? (
+          <div className={styles.modalPlacementHelper}>
+            <AddCardErrorModal
+              show={showModal}
+              hide={() => setShowModal(false)}
+            />
+          </div>
+        ) : null}
+        <div className={styles.cardFormInnerContainer}>
+          <div className={styles.cardNameContainer}>
+            <input
+              className={styles.cardNameInput}
+              type="text"
+              value={playerName}
+              onChange={nameChangeHandler}
+              title="Name"
+              placeholder="Name"
+            />
+            <button
+              onClick={resetHandler}
+              className={
+                isDisabled
+                  ? "material-icons md-light md-inactive"
+                  : "material-icons md-light undo"
+              }
+              // className="material-icons md-light undo"
+              type="submit"
+              disabled={isDisabled}
+              title={isDisabled ? "Enter something to clear it" : null}
+            >
+              undo
+            </button>
+          </div>
+          <div className={styles.attributes}>
+            <span />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="LVL"
+              ref={playerLvlRef}
+              title="Level"
+              type="number"
+            />
+            <span />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="STR"
+              ref={playerStrRef}
+              title="Strength"
+              type="number"
+            />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="FIN"
+              ref={playerFinRef}
+              title="Finesse"
+              type="number"
+            />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="INT"
+              ref={playerIntRef}
+              type="number"
+            />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="CON"
+              ref={playerConRef}
+              title="Constitution"
+              type="number"
+            />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="MEM"
+              ref={playerMemRef}
+              title="Memory"
+              type="number"
+            />
+            <input
+              className="inputField"
+              max="20"
+              min="1"
+              placeholder="WIT"
+              ref={playerWitRef}
+              title="Wits"
+              type="number"
+            />
+          </div>
+          <nav className="submitButtonContainer">
+            <button
+              // className={isDisabled ? "submitButton__disabled" : "submitButton"}
+              className={
+                isDisabled
+                  ? "material-icons md-light md-inactive"
+                  : "material-icons md-light save"
+              }
+              disabled={isDisabled}
+              // onClick={submitHandler}
+              title={
+                isDisabled
+                  ? "Please fill out all entries before submitting"
+                  : null
+              }
+              type="submit"
+            >
+              save
+              {/* <span className="material-icons md-light save">save</span> */}
+            </button>
+          </nav>
         </div>
-      ) : null}
-      <div className={styles.cardNameContainer}>
-        <input
-          className={styles.cardNameInput}
-          type="text"
-          value={playerName}
-          onChange={nameChangeHandler}
-          title="Name"
-          placeholder="Name"
-        />
-        <button
-          onClick={resetHandler}
-          className={
-            isDisabled
-              ? "material-icons md-light md-inactive"
-              : "material-icons md-light undo"
-          }
-          // className="material-icons md-light undo"
-          type="submit"
-          disabled={isDisabled}
-          title={isDisabled ? "Enter something to clear it" : null}
-        >
-          undo
-        </button>
-      </div>
-      <div className={styles.attributes}>
-        <span />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="LVL"
-          ref={playerLvlRef}
-          title="Level"
-          type="number"
-        />
-        <span />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="STR"
-          ref={playerStrRef}
-          title="Strength"
-          type="number"
-        />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="FIN"
-          ref={playerFinRef}
-          title="Finesse"
-          type="number"
-        />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="INT"
-          ref={playerIntRef}
-          type="number"
-        />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="CON"
-          ref={playerConRef}
-          title="Constitution"
-          type="number"
-        />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="MEM"
-          ref={playerMemRef}
-          title="Memory"
-          type="number"
-        />
-        <input
-          className="inputField"
-          max="20"
-          min="1"
-          placeholder="WIT"
-          ref={playerWitRef}
-          title="Wits"
-          type="number"
-        />
-      </div>
-      <nav className="submitButtonContainer">
-        <button
-          // className={isDisabled ? "submitButton__disabled" : "submitButton"}
-          className={
-            isDisabled
-              ? "material-icons md-light md-inactive"
-              : "material-icons md-light save"
-          }
-          disabled={isDisabled}
-          // onClick={submitHandler}
-          title={
-            isDisabled ? "Please fill out all entries before submitting" : null
-          }
-          type="submit"
-        >
-          save
-          {/* <span className="material-icons md-light save">save</span> */}
-        </button>
-      </nav>
-    </form>
+      </form>
+    </>
     //</div>
   );
 };

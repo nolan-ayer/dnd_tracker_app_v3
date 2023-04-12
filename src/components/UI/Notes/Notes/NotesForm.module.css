@@ -6,9 +6,9 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: fit-content;
   justify-content: flex-start;
-  padding: 2.5vmin;
+  padding: 1rem;
   position: relative;
   width: auto;
 }
@@ -20,115 +20,32 @@
   height: 100%;
 }
 
-.notesBodyInput {
+.noteTextInput {
+  border: none;
   border-radius: 15px;
-  box-sizing: border-box;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  resize: none;
+  text-align: top;
+  width: 100%;
+}
 
+.noteTextBodyInput {
+  border: none;
+  border-radius: 15px;
   height: 100%;
-  margin: 2.5vmin 0 0 0;
+  margin: 0 0 1rem 0;
   padding: 0.5rem;
   resize: none;
+  text-align: top;
   width: 100%;
 }
 
-.notesTitleInput {
-  border-radius: 15px;
-  box-sizing: border-box;
-
-  padding: 0.5rem;
-  resize: none;
-  width: 100%;
-}
-
-.notesTitleInput:focus,
-.notesBodyInput:focus {
+.noteTextInput:focus {
   outline: 1px solid lightskyblue;
   box-shadow: 0 0 4px paleturquoise;
 }
 
-.notesTitleInput:hover,
-.notesBodyInput:hover {
+.noteTextInput:hover {
   box-shadow: 0 0 5px 1px lightblue;
-}
-
-.notesSubmitButtonContainer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 1rem 0 0;
-}
-
-@media (max-width: 900px) and (orientation: landscape) {
-  .notesTitleInput {
-  }
-  .notesBodyInput {
-  }
-}
-
-@media (min-width: 901px) and (orientation: landscape) {
-  .notesTitleInput {
-  }
-  .notesBodyInput {
-  }
-}
-
-@media (min-width: 1281px) and (orientation: landscape) {
-  .notesTitleInput {
-  }
-  .notesBodyInput {
-    height: 100%;
-  }
-}
-
-@media (min-width: 1367px) and (orientation: landscape) {
-  .notesTitleInput {
-    height: 3vh;
-  }
-  .notesBodyInput {
-    height: 100%;
-  }
-}
-
-@media (min-width: 1601px) and (orientation: landscape) {
-  .notesTitleInput {
-    height: 3vh;
-  }
-  .notesBodyInput {
-    height: 100%;
-  }
-}
-
-@media (min-width: 1921px) and (orientation: landscape) {
-  .notesTitleInput {
-    height: 3vh;
-  }
-  .notesBodyInput {
-    height: 100%;
-  }
-}
-
-@media (max-width: 800px) and (orientation: portrait) {
-  .notesForm {
-    max-height: fit-content;
-  }
-  .notesTitleInput {
-    height: 4vh;
-  }
-  .notesBodyInput {
-    height: 12vh;
-  }
-}
-
-@media (min-width: 801px) and (orientation: portrait) {
-  .notesForm {
-    max-height: fit-content;
-  }
-  .notesTitleContainer {
-    margin-bottom: 1rem;
-  }
-  .notesTitleInput {
-    height: 4vh;
-  }
-  .notesBodyInput {
-    height: 12vh;
-  }
 }
