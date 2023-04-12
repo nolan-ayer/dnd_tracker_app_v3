@@ -39,7 +39,7 @@ const ChangePasswordForm = () => {
     //validate entries
     async function postUpdatedPasswordHandler() {
       const response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38",
+        `https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38`,
         {
           method: "POST",
           body: JSON.stringify({
@@ -129,7 +129,7 @@ const ChangePasswordForm = () => {
             )}
             <button
               // className={isDisabled ? "submitButton__disabled" : "submitButton"}
-              class="material-icons md-light save"
+              className="material-icons md-light save"
               type="submit"
               onClick={passwordCheckHandler}
               disabled={isDisabled}

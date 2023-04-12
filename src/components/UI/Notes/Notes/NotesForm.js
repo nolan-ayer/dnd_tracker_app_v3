@@ -80,7 +80,7 @@ const NotesForm = (props) => {
           {isLoading && <p className="response__isLoading">updating list...</p>}
           <button
             // className={isDisabled ? "submitButton__disabled" : "submitButton"}
-            class="material-icons md-light save"
+            className="material-icons md-light save"
             disabled={isDisabled}
             onClick={submitHandler}
             title={isDisabled ? "Fields must not be empty" : null}

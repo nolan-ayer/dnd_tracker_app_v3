@@ -18,7 +18,7 @@ const HeaderMain = () => {
           }
           to="/"
         >
-          <span class="material-icons md-light">home</span>
+          <span className="material-icons md-light">home</span>
         </Link>
         <HeaderNav />
       </header>

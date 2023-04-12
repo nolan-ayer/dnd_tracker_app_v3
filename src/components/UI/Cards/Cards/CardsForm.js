@@ -19,7 +19,7 @@ const CardsForm = (props) => {
     setPlayerName(event.target.value);
   };
 
-  const authCtx = useContext(AuthContext);
+  const id = localStorage.getItem("userId");
 
   useEffect(() => {
     if (
@@ -56,8 +56,7 @@ const CardsForm = (props) => {
     playerWitRef,
   ]);
 
-  const resetHandler = (event) => {
-    event.preventDefault();
+  const resetHandler = () => {
     setPlayerName("");
     playerLvlRef.current.value = null;
     playerStrRef.current.value = null;
@@ -71,37 +70,31 @@ const CardsForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (
-      (playerLvlRef.current.value ||
-        playerStrRef.current.value ||
-        playerFinRef.current.value ||
-        playerIntRef.current.value ||
-        playerConRef.current.value ||
-        playerMemRef.current.value ||
-        playerWitRef.current.value) > 20 ||
-      (playerLvlRef.current.value ||
-        playerStrRef.current.value ||
-        playerFinRef.current.value ||
-        playerIntRef.current.value ||
-        playerConRef.current.value ||
-        playerMemRef.current.value ||
-        playerWitRef.current.value) < 1
+      playerLvlRef.current.value > 20 ||
+      (playerLvlRef.current.value < 1 && playerStrRef.current.value > 20) ||
+      (playerStrRef.current.value < 1 && playerFinRef.current.value > 20) ||
+      (playerFinRef.current.value < 1 && playerIntRef.current.value > 20) ||
+      (playerIntRef.current.value < 1 && playerConRef.current.value > 20) ||
+      (playerConRef.current.value < 1 && playerMemRef.current.value > 20) ||
+      (playerMemRef.current.value < 1 && playerWitRef.current.value > 20) ||
+      playerWitRef.current.value < 1
     ) {
       setShowModal(true);
     } else if (
-      (playerLvlRef.current.value &&
-        playerStrRef.current.value &&
-        playerFinRef.current.value &&
-        playerIntRef.current.value &&
-        playerConRef.current.value &&
-        playerMemRef.current.value &&
-        playerWitRef.current.value) >= 1 &&
-      (playerLvlRef.current.value &&
-        playerStrRef.current.value &&
-        playerFinRef.current.value &&
-        playerIntRef.current.value &&
-        playerConRef.current.value &&
-        playerMemRef.current.value &&
-        playerWitRef.current.value) <= 20
+      playerLvlRef.current.value >= 1 &&
+      playerLvlRef.current.value <= 20 &&
+      playerStrRef.current.value >= 1 &&
+      playerStrRef.current.value <= 20 &&
+      playerFinRef.current.value >= 1 &&
+      playerFinRef.current.value <= 20 &&
+      playerIntRef.current.value >= 1 &&
+      playerIntRef.current.value <= 20 &&
+      playerConRef.current.value >= 1 &&
+      playerConRef.current.value <= 20 &&
+      playerMemRef.current.value >= 1 &&
+      playerMemRef.current.value <= 20 &&
+      playerWitRef.current.value >= 1 &&
+      playerWitRef.current.value <= 20
     ) {
       const playerData = {
         name: playerName,
@@ -116,9 +109,7 @@ const CardsForm = (props) => {
 
       async function postCardHandler(playerData) {
         const response = await fetch(
-          `https://dnd-tracker-d4735-default-rtdb.firebaseio.com/${localStorage.getItem(
-            "userId"
-          )}/cards.json`,
+          `https://dnd-tracker-d4735-default-rtdb.firebaseio.com/${id}/cards.json`,
           {
             method: "POST",
             body: JSON.stringify(playerData),
@@ -134,13 +125,13 @@ const CardsForm = (props) => {
         console.log(data);
       }
       postCardHandler(playerData);
-      resetHandler();
     }
+    resetHandler();
   };
 
   return (
     // <div className={styles.cardsFormContainer}>
-    <form className={styles.cardsForm}>
+    <form className={styles.cardsForm} onSubmit={submitHandler}>
       {showModal ? (
         <div className={styles.modalPlacementHelper}>
           <AddCardErrorModal
@@ -165,7 +156,7 @@ const CardsForm = (props) => {
               ? "material-icons md-light md-inactive"
               : "material-icons md-light undo"
           }
-          // class="material-icons md-light undo"
+          // className="material-icons md-light undo"
           type="submit"
           disabled={isDisabled}
           title={isDisabled ? "Enter something to clear it" : null}
@@ -248,14 +239,14 @@ const CardsForm = (props) => {
               : "material-icons md-light save"
           }
           disabled={isDisabled}
-          onClick={submitHandler}
+          // onClick={submitHandler}
           title={
             isDisabled ? "Please fill out all entries before submitting" : null
           }
           type="submit"
         >
           save
-          {/* <span class="material-icons md-light save">save</span> */}
+          {/* <span className="material-icons md-light save">save</span> */}
         </button>
       </nav>
     </form>

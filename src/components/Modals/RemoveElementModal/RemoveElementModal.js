@@ -10,14 +10,14 @@ const RemoveElementModal = ({ removeItem, cancel }) => {
         </article>
         <nav className={styles.removeElementNav}>
           <button
-            class="material-icons md-light save"
+            className="material-icons md-light save"
             onClick={removeItem}
             title="Proceed"
           >
             check
           </button>
           <button
-            class="material-icons md-light delete"
+            className="material-icons md-light delete"
             onClick={cancel}
             title="Cancel"
           >

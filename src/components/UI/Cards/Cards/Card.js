@@ -83,14 +83,14 @@ const Card = (props) => {
       </ul> */}
       <nav className={styles.cardButtonContainer}>
         <button
-          class="material-icons md-light edit"
+          className="material-icons md-light edit"
           onClick={showEditHandler}
           title="Edit"
         >
           edit
         </button>
         <button
-          class="material-icons md-light delete"
+          className="material-icons md-light delete"
           onClick={() => {
             setShowRemoveModal(true);
           }}

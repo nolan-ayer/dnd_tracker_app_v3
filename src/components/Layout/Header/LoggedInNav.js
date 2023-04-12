@@ -21,7 +21,7 @@ const LoggedInNav = () => {
           title="Profile"
           to="/profile"
         >
-          <span class="material-icons md-light">person</span>
+          <span className="material-icons md-light">person</span>
         </Link>
         <Link
           className={
@@ -32,7 +32,7 @@ const LoggedInNav = () => {
           title="Cards"
           to="/cards"
         >
-          <span class="material-icons md-light">note_add</span>
+          <span className="material-icons md-light">note_add</span>
         </Link>
         <Link
           className={
@@ -43,7 +43,7 @@ const LoggedInNav = () => {
           title="Notes"
           to="/notes"
         >
-          <span class="material-icons md-light">description</span>
+          <span className="material-icons md-light">description</span>
         </Link>
         <Link
           className={styles.navButton}
@@ -51,7 +51,7 @@ const LoggedInNav = () => {
           title="Logout"
           to="/"
         >
-          <span class="material-icons md-light delete">logout</span>
+          <span className="material-icons md-light delete">logout</span>
         </Link>
       </nav>
     </>

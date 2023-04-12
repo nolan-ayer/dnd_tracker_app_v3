@@ -37,7 +37,7 @@ const Note = (props) => {
         <nav>
           <button
             // className="submitButton"
-            class="material-icons md-light delete"
+            className="material-icons md-light delete"
             onClick={() => {
               setShowRemoveModal(true);
             }}

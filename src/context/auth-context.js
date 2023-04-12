@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 const AuthContext = React.createContext({
   token: "",
   isLoggedIn: false,
+  userId: "",
   login: (token) => {},
   logout: () => {},
 });
@@ -11,14 +12,17 @@ const AuthContext = React.createContext({
 export const AuthContextProvider = (props) => {
   const initialToken = localStorage.getItem("token");
   const [token, setToken] = useState(initialToken);
+  const [userId, setUserId] = useState("");
 
   const userIsLoggedIn = !!token;
 
   const history = useHistory();
 
-  const loginHandler = (token) => {
+  const loginHandler = (token, userId) => {
     setToken(token);
+    setUserId(userId);
     localStorage.setItem("token", token);
+    localStorage.setItem("userId", userId);
     console.log("logged in");
   };
 

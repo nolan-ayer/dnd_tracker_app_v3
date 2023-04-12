@@ -7,10 +7,6 @@ import styles from "./Cards/Cards.module.css";
 const Cards = () => {
   const [playerCards, setPlayerCards] = useState([]);
 
-  const authCtx = useContext(AuthContext);
-  const updatedListCtx = useContext(UpdatedListContext);
-
-  //rewatch lecture 343
   async function fetchCardsHandler() {
     const response = await fetch(
       `https://dnd-tracker-d4735-default-rtdb.firebaseio.com/${localStorage.getItem(

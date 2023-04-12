@@ -38,8 +38,7 @@ const SignupForm = () => {
     event.preventDefault();
 
     async function newAccountSubmissionHandler() {
-      const url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38";
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38`;
 
       setIsLoading(true);
       const response = await fetch(url, {
@@ -54,9 +53,6 @@ const SignupForm = () => {
         },
       });
       const data = await response.json();
-      console.log(data);
-      const userID = data.localId;
-      console.log(userID);
 
       setIsLoading(false);
 
@@ -72,6 +68,10 @@ const SignupForm = () => {
         authCtx.login(data.idToken);
 
         alert("Account successfully created!");
+
+        const userId = data.localId;
+        console.log(userId);
+        localStorage.setItem("userId", userId);
         resetHandler();
       }
     }

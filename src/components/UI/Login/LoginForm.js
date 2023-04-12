@@ -40,8 +40,7 @@ const LoginForm = () => {
     event.preventDefault();
 
     async function existingAccountSubmissionHandler() {
-      const url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38";
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38`;
 
       setIsLoading(true);
       const response = await fetch(url, {
@@ -56,7 +55,6 @@ const LoginForm = () => {
         },
       });
       const data = await response.json();
-      console.log(data);
       const userId = data.localId;
 
       setIsLoading(false);
@@ -66,14 +64,15 @@ const LoginForm = () => {
         if (data && data.error && data.error.message) {
           errorMessage = data.error.message;
           alert(errorMessage);
+          console.log("error: ", errorMessage);
         } else {
           alert(errorMessage);
+          console.log("error: ", errorMessage);
         }
       } else if (response.ok) {
+        console.log("userData: ", data);
         authCtx.login(data.idToken);
-
         localStorage.setItem("userId", userId);
-
         alert("Authentication successful!");
         resetHandler();
         history.replace("/");
