@@ -40,7 +40,7 @@ const LoginForm = () => {
     event.preventDefault();
 
     async function existingAccountSubmissionHandler() {
-      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38`;
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDmPKhC1-iBGopwVsqxQdnY0XhoHzCDAa8`;
 
       setIsLoading(true);
       const response = await fetch(url, {

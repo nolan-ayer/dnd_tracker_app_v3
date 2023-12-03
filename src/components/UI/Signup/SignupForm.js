@@ -38,7 +38,7 @@ const SignupForm = () => {
     event.preventDefault();
 
     async function newAccountSubmissionHandler() {
-      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38`;
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDmPKhC1-iBGopwVsqxQdnY0XhoHzCDAa8`;
 
       setIsLoading(true);
       const response = await fetch(url, {

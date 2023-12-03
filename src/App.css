@@ -89,7 +89,6 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: flex-start;
 }
 

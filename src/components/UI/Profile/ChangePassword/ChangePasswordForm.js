@@ -39,7 +39,7 @@ const ChangePasswordForm = () => {
     //validate entries
     async function postUpdatedPasswordHandler() {
       const response = await fetch(
-        `https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBYsoaIS-06L99OeylFrI3K1WtFiTvLQ38`,
+        `https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDmPKhC1-iBGopwVsqxQdnY0XhoHzCDAa8`,
         {
           method: "POST",
           body: JSON.stringify({

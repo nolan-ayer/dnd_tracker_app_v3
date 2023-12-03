@@ -16,7 +16,7 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0;
-  width: 100%;
+  width: auto;
 }
 
 a {
@@ -124,7 +124,7 @@ ul {
 }
 .material-icons.md-light.md-inactive:hover {
   background-color: transparent;
-  box-shadow: 0 0 3px 1px salmon;
+  /* box-shadow: 0 0 3px 1px salmon; */
   color: rgba(255, 255, 255, 0.2);
   cursor: default;
 }
@@ -147,17 +147,20 @@ ul {
 }
 
 ::-webkit-scrollbar {
-  width: 0.35rem;
+  width: 0.75rem;
 }
 ::-webkit-scrollbar-track {
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(96, 96, 96);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(16, 16, 16);
+  background: rgb(128, 128, 128);
   border-radius: 15px;
   height: 0.5rem;
-  outline: 1px solid black;
   width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(148, 148, 148);
 }
 
 @media (orientation: portrait) {
