@@ -12,6 +12,10 @@ useEffect to fetch "fixes coming soon" from backend
 
 fix form bug that triggers error modal when using keyboard to submit creation of new card
 
+add inventory to cards
+
+patch bug onCardEdit that allows max values to exceed limits defined in initial form (use react-hook-form?)
+
 add edit functionality to notes
 
 redo styling for note titles to keep delete button (and eventually edit button) in its place - line break the title
