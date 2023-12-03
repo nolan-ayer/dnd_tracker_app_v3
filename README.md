@@ -6,9 +6,9 @@ DEV TODOS
 
 useEffect to fetch "fixes coming soon" from backend
 
-update styling to be less bland and simple
-change background color to fit new aesthetic
-redo header style
+~~update styling to be less bland and simple~~
+~~change background color to fit new aesthetic~~
+~~redo header style~~
 
 fix form bug that triggers error modal when using keyboard to submit creation of new card
 
