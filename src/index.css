@@ -81,7 +81,9 @@ input[type="text"] {
 }
 
 main {
-  background: linear-gradient(to bottom right, rgb(80, 188, 255), pink, orange);
+  /* background: linear-gradient(to bottom right, rgb(80, 188, 255), pink, orange); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+    url(https://wildtextures.com/wp-content/uploads/2011/11/wildtextures-old-paper-texture-3-1280x853.jpg);
   min-height: 100vh;
 }
 
