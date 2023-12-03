@@ -67,14 +67,35 @@ const Card = (props) => {
       <h5 className={styles.cardTitle}>{props.name}</h5>
       <ul className={styles.attributeGrid}>
         <li />
-        <li>LVL: {props.lvl}</li>
+        <li>
+          <label>LVL</label>
+          <span>{props.lvl}</span>
+        </li>
         <li />
-        <li>STR: {props.str}</li>
-        <li>FIN: {props.fin}</li>
-        <li>INT: {props.int}</li>
-        <li>CON: {props.con}</li>
-        <li>MEM: {props.mem}</li>
-        <li>WIT: {props.wit}</li>
+        <li>
+          <label>STR</label>
+          <span>{props.str}</span>
+        </li>
+        <li>
+          <label>FIN</label>
+          <span>{props.fin}</span>
+        </li>
+        <li>
+          <label>INT</label>
+          <span>{props.int}</span>
+        </li>
+        <li>
+          <label>CON</label>
+          <span>{props.con}</span>
+        </li>
+        <li>
+          <label>MEM</label>
+          <span>{props.mem}</span>
+        </li>
+        <li>
+          <label>WIT</label>
+          <span>{props.wit}</span>
+        </li>
       </ul>
       <nav className={styles.cardButtonContainer}>
         <button

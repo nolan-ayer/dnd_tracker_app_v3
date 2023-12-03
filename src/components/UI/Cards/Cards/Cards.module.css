@@ -6,6 +6,15 @@
   text-align: center;
 }
 
+.attributeGrid > li {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.attributeGrid > li > label {
+  font-weight: bold;
+}
+
 .card {
   aspect-ratio: 5/7;
   background-color: rgb(60, 60, 60);
