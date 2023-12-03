@@ -2,7 +2,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
-  border-radius: 15px;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -22,7 +22,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
-  border-radius: 15px;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -49,7 +49,7 @@
   margin: 1rem;
   background-color: salmon;
   border: 1px white solid;
-  border-radius: 15px;
+  border-radius: 1rem;
   /* font-size: 1vw; */
 }
 

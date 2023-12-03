@@ -1,0 +1,49 @@
+.cell {
+  align-items: center;
+  background-color: rgba(64, 64, 64, 0.85);
+  border-radius: 1rem;
+  box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  /* text-align: center; */
+}
+
+.cell > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cell > ul > li > a {
+  color: teal;
+}
+
+.cell > ul > li > a:hover {
+  color: gold;
+}
+
+.footer {
+  background-image: url("https://media.minecraftforum.net/attachments/58/327/635519320735089277.png");
+  background-position: 0 100%;
+  gap: 1rem;
+  display: grid;
+  padding: 1rem;
+}
+
+@media (orientation: landscape) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (orientation: portrait) {
+  .cell {
+    text-align: center;
+    width: 80%;
+  }
+  .footer {
+    justify-items: center;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

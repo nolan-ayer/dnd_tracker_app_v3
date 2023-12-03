@@ -1,3 +1,4 @@
+import Footer from "./Footer/Footer";
 import HeaderMain from "./Header/HeaderMain";
 
 const Layout = (props) => {
@@ -5,6 +6,7 @@ const Layout = (props) => {
     <>
       <HeaderMain />
       <main className="mainContent">{props.children}</main>
+      <Footer />
     </>
   );
 };

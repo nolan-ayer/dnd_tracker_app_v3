@@ -2,7 +2,7 @@
   aspect-ratio: 5/3;
   background-color: rgb(60, 60, 60);
   background-image: url(https://media.istockphoto.com/id/165102644/photo/old-paper.jpg?s=612x612&w=0&k=20&c=W9yT9C4BqkrknYgR0nqK5L790p-9bj762fpGq3mmMo0=);
-  border-radius: 15px;
+  border-radius: 1rem;
   box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
   display: flex;
@@ -23,7 +23,7 @@
 
 .noteTextInput {
   border: none;
-  border-radius: 15px;
+  border-radius: 1rem;
   margin: 0 0 1rem 0;
   padding: 0.5rem;
   resize: none;
@@ -33,7 +33,7 @@
 
 .noteTextBodyInput {
   border: none;
-  border-radius: 15px;
+  border-radius: 1rem;
   height: 100%;
   margin: 0 0 1rem 0;
   padding: 0.5rem;
