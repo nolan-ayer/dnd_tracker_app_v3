@@ -27,8 +27,9 @@
 .contentMainPlacementHelper {
   align-items: center;
   background-color: rgb(60, 60, 60);
+  background-image: url(https://media.istockphoto.com/id/165102644/photo/old-paper.jpg?s=612x612&w=0&k=20&c=W9yT9C4BqkrknYgR0nqK5L790p-9bj762fpGq3mmMo0=);
   border-radius: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
   justify-content: center;
