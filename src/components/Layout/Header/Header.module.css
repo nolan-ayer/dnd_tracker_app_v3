@@ -1,11 +1,13 @@
 .headerMain {
   align-items: center;
   background-color: rgb(60, 60, 60);
-  border-bottom: 1px white solid;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+    url("https://cdn2.vectorstock.com/i/1000x1000/03/56/hexagon-seamless-pattern-vector-7890356.jpg");
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
+  object-fit: cover;
   padding: 1rem;
   width: 100vw;
 }

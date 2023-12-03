@@ -96,10 +96,11 @@ ul {
 }
 
 .material-icons.md-light {
-  background-color: rgba(0, 0, 0, 0.075);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgb(96, 96, 96);
+  border: 1px solid transparent;
   border-radius: 5vw;
-  color: rgba(255, 255, 255, 0.3);
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  color: rgba(255, 255, 255, 1);
   cursor: default;
   margin: 0.25vmin;
   padding: 0.5vmin;
@@ -116,9 +117,9 @@ ul {
   padding: 0.25vmin;
 }
 .material-icons.md-light:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(64, 64, 64);
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   transition: all 150ms ease-in;
 }
