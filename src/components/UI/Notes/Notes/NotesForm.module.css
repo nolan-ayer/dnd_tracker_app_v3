@@ -1,6 +1,7 @@
 .notesForm {
   aspect-ratio: 5/3;
   background-color: rgb(60, 60, 60);
+  background-image: url(https://wildtextures.com/wp-content/uploads/2011/11/wildtextures-old-paper-texture-3-1280x853.jpg);
   border-radius: 15px;
   box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
