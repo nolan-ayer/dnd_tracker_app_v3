@@ -99,7 +99,7 @@ ul {
 
 .material-icons.md-light {
   background-color: rgb(96, 96, 96);
-  border: 1px solid transparent;
+  border: 1px solid gold;
   border-radius: 5vw;
   /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
   color: rgba(255, 255, 255, 1);
@@ -111,24 +111,25 @@ ul {
   background-color: teal;
 }
 .material-icons.md-light.md-inactive {
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid transparent;
   border-radius: 5vw;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgb(172, 172, 172);
   cursor: default;
   margin: 0.25vmin;
   padding: 0.25vmin;
 }
 .material-icons.md-light:hover {
   background-color: rgb(64, 64, 64);
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid teal;
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: all 150ms ease-in;
 }
 .material-icons.md-light.md-inactive:hover {
-  background-color: transparent;
+  background-color: rgb(96, 96, 96);
   /* box-shadow: 0 0 3px 1px salmon; */
-  color: rgba(255, 255, 255, 0.2);
+  border: 1px solid transparent;
+  color: rgb(172, 172, 172);
   cursor: default;
 }
 .material-icons.md-light.delete:hover {
