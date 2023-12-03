@@ -78,9 +78,6 @@ const Card = (props) => {
         <li>MEM: {props.mem}</li>
         <li>WIT: {props.wit}</li>
       </ul>
-      {/* <ul className={styles.cardInnerTwo__One}>
-
-      </ul> */}
       <nav className={styles.cardButtonContainer}>
         <button
           className="material-icons md-light edit"

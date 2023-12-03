@@ -5,8 +5,8 @@ const RemoveElementModal = ({ removeItem, cancel }) => {
     <div className={styles.modalBackdrop}>
       <section>
         <article className={styles.modalMain}>
-          WARNING, YOU ARE ABOUT TO DELETE SOMETHING. THIS CANNOT BE DONE. WOULD
-          YOU LIKE TO PROCEED?
+          WARNING, YOU ARE ABOUT TO DELETE SOMETHING. THIS CANNOT BE UNDONE.
+          WOULD YOU LIKE TO PROCEED?
         </article>
         <nav className={styles.removeElementNav}>
           <button
