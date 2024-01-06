@@ -12,7 +12,7 @@ const Footer = () => {
         <label>Quick Links</label>
         <ul>
           <li>
-            <a href="https://github.com/nowolan?tab=repositories">GitHub</a>
+            <a href="https://github.com/nolan-ayer?tab=repositories">GitHub</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/nolan-ayer/">LinkedIn</a>
